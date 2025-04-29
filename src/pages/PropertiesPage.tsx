@@ -1,103 +1,102 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import PropertyCard, { Property } from '@/components/properties/PropertyCard';
+import FleetCard, { Fleet } from '@/components/fleet/FleetCard';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
-// Mock data
-const allProperties = [
+// Mock data for fleet vehicles
+const allFleets: Fleet[] = [
   {
     id: '1',
-    title: 'Oceanfront Villa',
-    location: 'Byron Bay, NSW',
-    price: 450,
-    imageUrl: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 3,
-    bathrooms: 2,
-    maxGuests: 6
+    title: 'MERCEDES GLE',
+    price: 120,
+    imageUrl: 'public/lovable-uploads/306be31a-6a92-46ba-805b-b144d3d623aa.png',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   },
   {
     id: '2',
-    title: 'Luxury Beach House',
-    location: 'Gold Coast, QLD',
-    price: 380,
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 4,
-    bathrooms: 3,
-    maxGuests: 8
+    title: 'AUDI Q7',
+    price: 120,
+    imageUrl: 'public/lovable-uploads/01381383-012b-4118-8385-a6e69ec1dbed.png',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   },
   {
     id: '3',
-    title: 'Mountain Retreat',
-    location: 'Blue Mountains, NSW',
-    price: 320,
-    imageUrl: 'https://images.unsplash.com/photo-1542718610-a1d656d1884c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 2,
-    bathrooms: 2,
-    maxGuests: 4
+    title: 'LEXUS RX',
+    price: 120,
+    imageUrl: 'public/lovable-uploads/5b6e4cc4-681b-4da0-8314-b451520b2d4e.png',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   },
   {
     id: '4',
-    title: 'Waterfront Cottage',
-    location: 'Port Douglas, QLD',
-    price: 290,
-    imageUrl: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 2,
-    bathrooms: 1,
-    maxGuests: 4
+    title: 'MERCEDES GLS',
+    price: 140,
+    imageUrl: 'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   },
   {
     id: '5',
-    title: 'Penthouse Apartment',
-    location: 'Sydney, NSW',
-    price: 520,
-    imageUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 3,
-    bathrooms: 2,
-    maxGuests: 6
+    title: 'MERCEDES V CLASS',
+    price: 140,
+    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   },
   {
     id: '6',
-    title: 'Rainforest Retreat',
-    location: 'Daintree, QLD',
-    price: 340,
-    imageUrl: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    bedrooms: 2,
-    bathrooms: 2,
-    maxGuests: 4
+    title: 'BMW X7',
+    price: 140,
+    imageUrl: 'https://images.unsplash.com/photo-1622294891694-07a7ebbd9f37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 4
   }
 ];
 
 const PropertiesPage = () => {
   const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = React.useState('');
-  const [filteredProperties, setFilteredProperties] = React.useState<Property[]>(allProperties);
+  const [filteredFleets, setFilteredFleets] = React.useState<Fleet[]>(allFleets);
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!searchTerm.trim()) {
-      setFilteredProperties(allProperties);
+      setFilteredFleets(allFleets);
       return;
     }
     
-    const filtered = allProperties.filter(property => 
-      property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      property.location.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = allFleets.filter(fleet => 
+      fleet.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     
-    setFilteredProperties(filtered);
+    setFilteredFleets(filtered);
   };
   
   return (
     <div className="pt-24">
       <div className="container mx-auto section-padding">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold font-playfair mb-4">{t('all_properties')}</h1>
+          <h1 className="text-4xl font-bold font-playfair mb-4">{t('our_fleet')}</h1>
           <p className="text-resort-navy/70 max-w-2xl mx-auto">
-            Discover our collection of luxury vacation rentals across Australia
+            Discover our collection of luxury vehicles for your premium transportation needs
           </p>
         </div>
         
@@ -105,7 +104,7 @@ const PropertiesPage = () => {
           <form onSubmit={handleSearch} className="flex w-full max-w-lg mx-auto gap-2">
             <Input
               type="text"
-              placeholder="Search by location or property name"
+              placeholder="Search by vehicle name"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="bg-white"
@@ -117,13 +116,13 @@ const PropertiesPage = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProperties.length > 0 ? (
-            filteredProperties.map(property => (
-              <PropertyCard key={property.id} property={property} />
+          {filteredFleets.length > 0 ? (
+            filteredFleets.map(fleet => (
+              <FleetCard key={fleet.id} fleet={fleet} />
             ))
           ) : (
             <div className="col-span-3 text-center py-12">
-              <p className="text-xl">No properties found matching your search.</p>
+              <p className="text-xl">No vehicles found matching your search.</p>
             </div>
           )}
         </div>
