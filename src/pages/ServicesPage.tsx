@@ -37,7 +37,7 @@ const ServicesPage = () => {
     {
       id: '2',
       title: 'Corporate Services',
-      description: 'Make a lasting impression with our corporate transportation solutions. Whether it's business meetings, airport transfers, or executive travel, we provide reliable, discreet, and professional service for all your corporate needs.',
+      description: "Make a lasting impression with our corporate transportation solutions. Whether it's business meetings, airport transfers, or executive travel, we provide reliable, discreet, and professional service for all your corporate needs.",
       icon: <Building className="h-6 w-6 text-white" />,
       imageUrl: 'https://images.unsplash.com/photo-1560269507-c33ad6c719bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       features: [

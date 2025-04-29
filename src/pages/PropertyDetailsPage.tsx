@@ -54,7 +54,7 @@ const fleetData = [
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4,
-    description: 'The Lexus RX offers an unparalleled combination of luxury and reliability. With its refined interior, smooth drive, and advanced features, this premium SUV ensures a comfortable journey for all occasions, whether it's business transfers, airport pickups, or special events.',
+    description: "The Lexus RX offers an unparalleled combination of luxury and reliability. With its refined interior, smooth drive, and advanced features, this premium SUV ensures a comfortable journey for all occasions, whether it's business transfers, airport pickups, or special events.",
     features: ['Luxurious Seating', 'Multi-zone Climate Control', 'Premium Entertainment System', 'Privacy Glass', 'Professional Driver', 'Complimentary Amenities', 'Charging Ports', 'Regular Sanitization'],
     gallery: [
       'public/lovable-uploads/5b6e4cc4-681b-4da0-8314-b451520b2d4e.png',
