@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Plane, Car, MapPin, SignpostBig } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Service {
   id: string;
@@ -84,11 +85,12 @@ const ServicesSection: React.FC = () => {
                 <h3 className="text-xl font-bold mb-2 font-playfair">{service.title}</h3>
                 <p className="text-resort-navy/70 mb-4">{service.description}</p>
                 <Button 
-                  as="a"
-                  href={service.buttonLink}
                   className="bg-primary hover:bg-primary/90 text-white"
+                  asChild
                 >
-                  {service.buttonText}
+                  <Link to={service.buttonLink}>
+                    {service.buttonText}
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

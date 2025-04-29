@@ -21,9 +21,9 @@ const translations: Translations = {
     ja: '会社概要',
   },
   'properties': {
-    en: 'Properties',
-    zh: '房产',
-    ja: '物件',
+    en: 'Fleets',
+    zh: '车队',
+    ja: '車両',
   },
   'contact': {
     en: 'Contact',
@@ -75,10 +75,10 @@ const translations: Translations = {
     zh: '发送',
     ja: '送信',
   },
-  'all_properties': {
-    en: 'All Properties',
-    zh: '所有房产',
-    ja: 'すべての物件',
+  'all_vehicles': {
+    en: 'All Vehicles',
+    zh: '所有车辆',
+    ja: 'すべての車両',
   },
   'bedroom': {
     en: 'Bedroom',
@@ -116,14 +116,64 @@ const translations: Translations = {
     ja: '会社概要',
   },
   'luxury_experience': {
-    en: 'Luxury Vacation Experience',
-    zh: '豪华度假体验',
-    ja: '豪華なバケーション体験',
+    en: 'Luxury Transportation Experience',
+    zh: '豪华交通体验',
+    ja: '豪華な交通体験',
   },
   'contact_form': {
     en: 'Contact Form',
     zh: '联系表格',
     ja: 'お問い合わせフォーム',
+  },
+  'luxury_transportation': {
+    en: 'Luxury Transportation',
+    zh: '豪华交通',
+    ja: '豪華な輸送',
+  },
+  'our_luxury_fleet': {
+    en: 'Our Luxury Fleet',
+    zh: '我们的豪华车队',
+    ja: '当社の高級車両',
+  },
+  'our_fleet': {
+    en: 'Our Fleet',
+    zh: '我们的车队',
+    ja: '当社の車両',
+  },
+  'passengers': {
+    en: 'Passengers',
+    zh: '乘客',
+    ja: '乗客',
+  },
+  'interior': {
+    en: 'Interior',
+    zh: '内饰',
+    ja: '内装',
+  },
+  'wifi': {
+    en: 'WiFi',
+    zh: '无线网络',
+    ja: 'Wi-Fi',
+  },
+  'bag_capacity': {
+    en: 'Bag Capacity',
+    zh: '行李容量',
+    ja: '荷物容量',
+  },
+  'per_hour': {
+    en: 'per hour',
+    zh: '每小时',
+    ja: '毎時間',
+  },
+  'our_services': {
+    en: 'Our Services',
+    zh: '我们的服务',
+    ja: '当社のサービス',
+  },
+  'services': {
+    en: 'Services',
+    zh: '服务',
+    ja: 'サービス',
   },
 };
 

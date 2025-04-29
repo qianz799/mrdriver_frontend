@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import PropertiesPage from "./pages/PropertiesPage";
 import PropertyDetailsPage from "./pages/PropertyDetailsPage";
 import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Layout from "./components/layout/Layout";
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/properties" element={<Layout><PropertiesPage /></Layout>} />
             <Route path="/properties/:id" element={<Layout><PropertyDetailsPage /></Layout>} />
+            <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
             <Route path="/about" element={<Layout><AboutPage /></Layout>} />
             <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
             <Route path="*" element={<NotFound />} />
