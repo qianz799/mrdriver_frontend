@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import { z } from 'zod';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const ContactForm: React.FC = () => {
   const { t } = useLanguage();
@@ -14,13 +15,25 @@ const ContactForm: React.FC = () => {
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [reason, setReason] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   
+  const contactReasons = [
+    { value: 'booking', label: 'Make a Booking' },
+    { value: 'quote', label: 'Request a Quote' },
+    { value: 'feedback', label: 'Provide Feedback' },
+    { value: 'support', label: 'Customer Support' },
+    { value: 'other', label: 'Other Inquiry' }
+  ];
+  
   const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters" }),
     email: z.string().email({ message: "Please enter a valid email" }),
+    phone: z.string().min(8, { message: "Please enter a valid phone number" }),
+    reason: z.string().min(1, { message: "Please select a reason for contact" }),
     message: z.string().min(10, { message: "Message must be at least 10 characters" }),
   });
   
@@ -31,7 +44,7 @@ const ContactForm: React.FC = () => {
       setIsSubmitting(true);
       
       // Validate form
-      formSchema.parse({ name, email, message });
+      formSchema.parse({ name, email, phone, reason, message });
       setErrors({});
       
       // Mock API call
@@ -47,6 +60,8 @@ const ContactForm: React.FC = () => {
       // Reset form
       setName('');
       setEmail('');
+      setPhone('');
+      setReason('');
       setMessage('');
       
     } catch (error) {
@@ -93,6 +108,39 @@ const ContactForm: React.FC = () => {
           className={`bg-resort-white ${errors.email ? 'border-red-500' : ''}`}
         />
         {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="phone">Mobile Phone</Label>
+        <Input
+          id="phone"
+          type="tel"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className={`bg-resort-white ${errors.phone ? 'border-red-500' : ''}`}
+          placeholder="e.g. 0412 345 678"
+        />
+        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="reason">Reason for Contact</Label>
+        <Select value={reason} onValueChange={setReason}>
+          <SelectTrigger 
+            id="reason"
+            className={`bg-resort-white ${errors.reason ? 'border-red-500' : ''}`}
+          >
+            <SelectValue placeholder="Select a reason" />
+          </SelectTrigger>
+          <SelectContent>
+            {contactReasons.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        {errors.reason && <p className="text-sm text-red-500">{errors.reason}</p>}
       </div>
       
       <div className="space-y-2">
