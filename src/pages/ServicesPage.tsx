@@ -174,13 +174,13 @@ const ServicesPage = () => {
             Contact us today to discuss your transportation needs and discover how we can create a tailored solution for you.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link to="/properties">
-              <Button className="bg-white text-resort-blue hover:bg-white/90">
+            <Link to="/fleets">
+              <Button className="bg-white text-resort-blue">
                 View Our Fleet
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/20">
+              <Button className="bg-white text-resort-blue">
                 Contact Us
               </Button>
             </Link>
