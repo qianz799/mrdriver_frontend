@@ -3,7 +3,7 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Plane, Car, MapPin, SignpostBig } from 'lucide-react';
+import { Plane, Car, MapPin, SignpostBig, Building, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Service {
@@ -23,69 +23,60 @@ const ServicesSection: React.FC = () => {
     {
       id: '1',
       title: 'Airport Transfers',
-      description: 'Chauffeur driven luxury airport transfers to and from Sydney Airport',
+      description: 'Reliable and punctual airport pickup and drop-off services with flight tracking.',
       icon: <Plane className="h-6 w-6 text-white" />,
       imageUrl: 'https://images.unsplash.com/photo-1588867702719-08eae92ae1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Book Now',
-      buttonLink: '/contact'
+      buttonText: 'Learn More',
+      buttonLink: '/services'
     },
     {
       id: '2',
       title: 'Corporate Services',
-      description: 'Premium transportation services for business executives and corporate events',
-      icon: <Car className="h-6 w-6 text-white" />,
+      description: 'Professional transportation for executives and business events with dedicated accounts.',
+      icon: <Building className="h-6 w-6 text-white" />,
       imageUrl: 'https://images.unsplash.com/photo-1560269507-c33ad6c719bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Book Now',
-      buttonLink: '/contact'
+      buttonText: 'Learn More',
+      buttonLink: '/services'
     },
     {
       id: '3',
-      title: 'Wedding Services',
-      description: 'Elegant luxury vehicles for your special day with professional chauffeurs',
+      title: 'Luxury Tours',
+      description: 'Customized sightseeing tours and special events transportation with expert local drivers.',
       icon: <MapPin className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1608508644127-ba99d7732fee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Book Now',
-      buttonLink: '/contact'
-    },
-    {
-      id: '4',
-      title: 'Special Event Transfers',
-      description: 'VIP transportation for concerts, sporting events and special occasions',
-      icon: <SignpostBig className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Book Now',
-      buttonLink: '/contact'
+      imageUrl: 'https://images.unsplash.com/photo-1523428096881-5bd79d043006?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      buttonText: 'Learn More',
+      buttonLink: '/services'
     }
   ];
   
   return (
-    <section className="section-padding bg-resort-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">{t('our_services')}</h2>
-          <p className="text-resort-navy/70 max-w-2xl mx-auto">
-            Discover our premium transportation services tailored to your needs
-          </p>
-        </div>
+    <section className="py-16 bg-resort-sand">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-3 text-center">Our Premium Services</h2>
+        <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p className="text-center mb-12 text-resort-navy/70 max-w-2xl mx-auto">
+          Experience luxury transportation with our professional driver services tailored to your needs.
+        </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map(service => (
-            <Card key={service.id} className="overflow-hidden border shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative">
+            <Card key={service.id} className="overflow-hidden border shadow-md hover:shadow-lg transition-shadow bg-white">
+              <div className="relative h-48">
                 <img 
                   src={service.imageUrl} 
                   alt={service.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-primary rounded-full p-2">
                   {service.icon}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 font-playfair">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 font-playfair">{service.title}</h3>
                 <p className="text-resort-navy/70 mb-4">{service.description}</p>
                 <Button 
-                  className="bg-primary hover:bg-primary/90 text-white"
+                  variant="outline"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white"
                   asChild
                 >
                   <Link to={service.buttonLink}>
