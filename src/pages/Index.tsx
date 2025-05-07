@@ -50,7 +50,7 @@ const Index = () => {
       <HeroSection 
         title="Premium Transportation Services"
         subtitle="Experience luxury and comfort with our professional driver services across Australia."
-        backgroundImage="public/lovable-uploads/7b2e42d9-14a9-49fb-ac3e-8e518efea6de.png"
+        backgroundImage="https://bangkokcelebrations.com/wp-content/uploads/2024/09/lt1-1024x683.jpg"
         buttonText="Contact Us"
         buttonLink="/contact"
       />

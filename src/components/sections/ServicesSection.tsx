@@ -25,7 +25,7 @@ const ServicesSection: React.FC = () => {
       title: 'Airport Transfers',
       description: 'Reliable and punctual airport pickup and drop-off services with flight tracking.',
       icon: <Plane className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1588867702719-08eae92ae1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://www.melbournetaxiservices.au/wp-content/uploads/2021/08/Airport-Transfer-services-1.jpg',
       buttonText: 'Learn More',
       buttonLink: '/services'
     },
@@ -34,7 +34,7 @@ const ServicesSection: React.FC = () => {
       title: 'Corporate Services',
       description: 'Professional transportation for executives and business events with dedicated accounts.',
       icon: <Building className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1560269507-c33ad6c719bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://chauffeurlimousine.com.au/wp-content/uploads/2024/03/corp.jpg',
       buttonText: 'Learn More',
       buttonLink: '/services'
     },

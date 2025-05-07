@@ -54,7 +54,12 @@ const Header: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Top Bar with Contact Info */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to="/" className="text-resort-navy z-50">
+            <Link to="/" className="text-resort-navy z-50 flex items-center">
+              <img 
+                src="public/lovable-uploads/0d225578-b23e-4152-9cd8-b0725748cf66.png" 
+                alt="MrDrivers Logo" 
+                className="h-10 mr-3" 
+              />
               <h1 className="text-2xl font-bold font-playfair">Mr Drivers</h1>
             </Link>
             
