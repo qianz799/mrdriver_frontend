@@ -18,7 +18,7 @@ const FeaturedFleet: React.FC<FeaturedFleetProps> = ({ fleets }) => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-2">{t('our_luxury_fleet')}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-2">Our Fleet</h2>
             <p className="text-resort-navy/70">Experience our premium vehicles for your journey</p>
           </div>
           

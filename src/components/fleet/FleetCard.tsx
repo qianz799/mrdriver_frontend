@@ -33,9 +33,6 @@ const FleetCard: React.FC<FleetCardProps> = ({ fleet }) => {
             alt={fleet.title} 
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
-          <div className="absolute top-3 right-3 bg-white py-1 px-3 rounded-full text-primary font-medium">
-            ${fleet.price} <span className="text-xs text-resort-navy/70">{t('per_hour')}</span>
-          </div>
         </div>
       </Link>
       

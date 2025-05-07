@@ -12,8 +12,8 @@ const fleetData = [
     id: '1',
     title: 'MERCEDES GLE',
     location: 'Sydney, NSW',
-    price: 120,
-    imageUrl: 'public/lovable-uploads/306be31a-6a92-46ba-805b-b144d3d623aa.png',
+    price: 0,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/gle/gle-coupe-c167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-coupe-c167-modeloverview-696x392-01-2023.png',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -21,17 +21,15 @@ const fleetData = [
     description: 'Experience supreme luxury and comfort with our Mercedes GLE. This premium SUV offers a sophisticated driving experience combined with advanced technology and safety features. Perfect for corporate transfers, airport pickups, or special events.',
     features: ['Luxury Interior', 'Climate Control', 'Premium Sound System', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'public/lovable-uploads/306be31a-6a92-46ba-805b-b144d3d623aa.png',
-      'https://images.unsplash.com/photo-1563720223533-7df9a38029d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/gle/gle-coupe-c167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-coupe-c167-modeloverview-696x392-01-2023.png'
     ]
   },
   {
     id: '2',
     title: 'AUDI Q7',
     location: 'Sydney, NSW',
-    price: 120,
-    imageUrl: 'public/lovable-uploads/01381383-012b-4118-8385-a6e69ec1dbed.png',
+    price: 0,
+    imageUrl: 'https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/zhgcm3wy8fewu5jtqrsl',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -39,17 +37,15 @@ const fleetData = [
     description: 'Our Audi Q7 combines elegant design with superior performance. This spacious luxury SUV provides exceptional comfort for up to 4 passengers along with ample luggage space, making it ideal for airport transfers, corporate travel, or special occasions.',
     features: ['Premium Interior', 'Climate Control', 'High-End Audio System', 'Tinted Privacy Windows', 'Professional Chauffeur', 'Complimentary Refreshments', 'Device Charging', 'Enhanced Sanitization'],
     gallery: [
-      'public/lovable-uploads/01381383-012b-4118-8385-a6e69ec1dbed.png',
-      'https://images.unsplash.com/photo-1606141997073-d24cac65c2b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1578637451208-2a77ad255fb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/zhgcm3wy8fewu5jtqrsl'
     ]
   },
   {
     id: '3',
     title: 'LEXUS RX',
     location: 'Sydney, NSW',
-    price: 120,
-    imageUrl: 'public/lovable-uploads/5b6e4cc4-681b-4da0-8314-b451520b2d4e.png',
+    price: 0,
+    imageUrl: 'https://www.lexus.mx/content/dam/lexus-mx/images/models/rx/2024/visualizer/350/exterior/19-inch-five-spoke-alloy-wheels/eminent-white-pearl/small-1.jpg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -57,9 +53,7 @@ const fleetData = [
     description: "The Lexus RX offers an unparalleled combination of luxury and reliability. With its refined interior, smooth drive, and advanced features, this premium SUV ensures a comfortable journey for all occasions, whether it's business transfers, airport pickups, or special events.",
     features: ['Luxurious Seating', 'Multi-zone Climate Control', 'Premium Entertainment System', 'Privacy Glass', 'Professional Driver', 'Complimentary Amenities', 'Charging Ports', 'Regular Sanitization'],
     gallery: [
-      'public/lovable-uploads/5b6e4cc4-681b-4da0-8314-b451520b2d4e.png',
-      'https://images.unsplash.com/photo-1598278685567-593973cb3c9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1593293736085-67168cbcfb88?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://www.lexus.mx/content/dam/lexus-mx/images/models/rx/2024/visualizer/350/exterior/19-inch-five-spoke-alloy-wheels/eminent-white-pearl/small-1.jpg'
     ]
   },
   // Add more vehicles as needed
@@ -116,7 +110,7 @@ const PropertyDetailsPage = () => {
           <div className="lg:col-span-2">
             {/* Vehicle Details */}
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-              <div className="flex flex-wrap justify-between items-center pb-6 mb-6 border-b">
+              <div className="flex flex-wrap items-center pb-6 mb-6 border-b">
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
                     <Users className="h-5 w-5 text-primary mr-1" />
@@ -130,9 +124,6 @@ const PropertyDetailsPage = () => {
                     <Wifi className="h-5 w-5 text-primary mr-1" />
                     <span>WiFi: {vehicle.wifi}</span>
                   </div>
-                </div>
-                <div className="text-2xl font-bold text-primary">
-                  ${vehicle.price} <span className="text-sm text-resort-navy/70">{t('per_hour')}</span>
                 </div>
               </div>
               
