@@ -10,53 +10,100 @@ import ContactForm from '@/components/forms/ContactForm';
 const fleetData = [
   {
     id: '1',
-    title: 'MERCEDES GLE',
+    title: 'Mercedes-Benz GLS',
     location: 'Sydney, NSW',
-    price: 0,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/gle/gle-coupe-c167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-coupe-c167-modeloverview-696x392-01-2023.png',
+    price: 120,
+    imageUrl: 'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4,
-    description: 'Experience supreme luxury and comfort with our Mercedes GLE. This premium SUV offers a sophisticated driving experience combined with advanced technology and safety features. Perfect for corporate transfers, airport pickups, or special events.',
+    description: 'Experience supreme luxury and comfort with our Mercedes-Benz GLS. This premium SUV offers a sophisticated driving experience combined with advanced technology and safety features. Perfect for corporate transfers, airport pickups, or special events.',
     features: ['Luxury Interior', 'Climate Control', 'Premium Sound System', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/gle/gle-coupe-c167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-coupe-c167-modeloverview-696x392-01-2023.png'
+      'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
     id: '2',
-    title: 'AUDI Q7',
+    title: 'Mercedes-Benz S class',
     location: 'Sydney, NSW',
-    price: 0,
-    imageUrl: 'https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/zhgcm3wy8fewu5jtqrsl',
+    price: 150,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4,
-    description: 'Our Audi Q7 combines elegant design with superior performance. This spacious luxury SUV provides exceptional comfort for up to 4 passengers along with ample luggage space, making it ideal for airport transfers, corporate travel, or special occasions.',
-    features: ['Premium Interior', 'Climate Control', 'High-End Audio System', 'Tinted Privacy Windows', 'Professional Chauffeur', 'Complimentary Refreshments', 'Device Charging', 'Enhanced Sanitization'],
+    description: 'The Mercedes-Benz S class sets the standard for luxury sedans. Enjoy unmatched comfort, advanced technology, and a smooth ride for your most important journeys.',
+    features: ['Executive Seating', 'Ambient Lighting', 'Burmester Audio', 'Rear Seat Entertainment', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/zhgcm3wy8fewu5jtqrsl'
+      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png'
     ]
   },
   {
     id: '3',
-    title: 'LEXUS RX',
+    title: 'Mercedes-Benz Maybach S680',
     location: 'Sydney, NSW',
-    price: 0,
-    imageUrl: 'https://www.lexus.mx/content/dam/lexus-mx/images/models/rx/2024/visualizer/350/exterior/19-inch-five-spoke-alloy-wheels/eminent-white-pearl/small-1.jpg',
+    price: 350,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png',
     passengers: 4,
-    interior: 'Black Leather',
+    interior: 'Exclusive Leather',
     wifi: 'Upon Request',
     bagCapacity: 4,
-    description: "The Lexus RX offers an unparalleled combination of luxury and reliability. With its refined interior, smooth drive, and advanced features, this premium SUV ensures a comfortable journey for all occasions, whether it's business transfers, airport pickups, or special events.",
-    features: ['Luxurious Seating', 'Multi-zone Climate Control', 'Premium Entertainment System', 'Privacy Glass', 'Professional Driver', 'Complimentary Amenities', 'Charging Ports', 'Regular Sanitization'],
+    description: 'The ultimate in luxury, the Maybach S680 offers a first-class experience with every detail. Perfect for VIPs, weddings, and special occasions.',
+    features: ['First-Class Cabin', 'Reclining Rear Seats', 'Champagne Fridge', 'Burmester High-End 4D Surround Sound', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://www.lexus.mx/content/dam/lexus-mx/images/models/rx/2024/visualizer/350/exterior/19-inch-five-spoke-alloy-wheels/eminent-white-pearl/small-1.jpg'
+      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png'
     ]
   },
-  // Add more vehicles as needed
+  {
+    id: '4',
+    title: 'Mercedes-Benz V class',
+    location: 'Sydney, NSW',
+    price: 120,
+    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    passengers: 6,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 6,
+    description: 'The Mercedes-Benz V class is the perfect choice for group travel, offering space, comfort, and luxury for up to 6 passengers.',
+    features: ['Spacious Cabin', 'Flexible Seating', 'Premium Sound', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
+    gallery: [
+      'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    id: '5',
+    title: 'Mercedes-Benz VIP Sprinter',
+    location: 'Sydney, NSW',
+    price: 300,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    passengers: 8,
+    interior: 'VIP Leather',
+    wifi: 'Yes',
+    bagCapacity: 8,
+    description: 'Travel in style with the Mercedes-Benz VIP Sprinter, featuring a luxurious interior and amenities for business or leisure groups.',
+    features: ['VIP Cabin', 'Conference Seating', 'Onboard WiFi', 'Entertainment System', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
+    gallery: [
+      'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Mercedes-Benz Sprinter 11-14PAX',
+    location: 'Sydney, NSW',
+    price: 180,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    passengers: 14,
+    interior: 'Leather',
+    wifi: 'Yes',
+    bagCapacity: 14,
+    description: 'Ideal for larger groups, the Mercedes-Benz Sprinter 11-14PAX offers comfort, space, and convenience for up to 14 passengers.',
+    features: ['Large Cabin', 'Flexible Seating', 'Onboard WiFi', 'Luggage Space', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
+    gallery: [
+      'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
+    ]
+  }
 ];
 
 const PropertyDetailsPage = () => {

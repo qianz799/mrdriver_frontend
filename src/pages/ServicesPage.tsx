@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Plane, Car, MapPin, SignpostBig, Building, Calendar } from 'lucide-react';
+import CtaSection from '@/components/sections/CtaSection';
 
 interface Service {
   id: string;
@@ -167,26 +168,7 @@ const ServicesPage = () => {
       </div>
       
       {/* CTA Section */}
-      <div className="bg-resort-blue text-white">
-        <div className="container mx-auto section-padding text-center">
-          <h2 className="text-3xl font-bold font-playfair mb-6">Ready to Experience Luxury Transportation?</h2>
-          <p className="mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your transportation needs and discover how we can create a tailored solution for you.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Link to="/fleets">
-              <Button className="bg-white text-resort-blue">
-                View Our Fleet
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button className="bg-white text-resort-blue">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <CtaSection />
     </div>
   );
 };

@@ -10,38 +10,8 @@ import { Input } from '@/components/ui/input';
 const allFleets: Fleet[] = [
   {
     id: '1',
-    title: 'MERCEDES GLE',
-    price: 0,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/gle/gle-coupe-c167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-coupe-c167-modeloverview-696x392-01-2023.png',
-    passengers: 4,
-    interior: 'Black Leather',
-    wifi: 'Upon Request',
-    bagCapacity: 4
-  },
-  {
-    id: '2',
-    title: 'AUDI Q7',
-    price: 0,
-    imageUrl: 'https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/zhgcm3wy8fewu5jtqrsl',
-    passengers: 4,
-    interior: 'Black Leather',
-    wifi: 'Upon Request',
-    bagCapacity: 4
-  },
-  {
-    id: '3',
-    title: 'LEXUS RX',
-    price: 0,
-    imageUrl: 'https://www.lexus.mx/content/dam/lexus-mx/images/models/rx/2024/visualizer/350/exterior/19-inch-five-spoke-alloy-wheels/eminent-white-pearl/small-1.jpg',
-    passengers: 4,
-    interior: 'Black Leather',
-    wifi: 'Upon Request',
-    bagCapacity: 4
-  },
-  {
-    id: '4',
-    title: 'MERCEDES GLS',
-    price: 0,
+    title: 'Mercedes-Benz GLS',
+    price: 120,
     imageUrl: 'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     passengers: 4,
     interior: 'Black Leather',
@@ -49,24 +19,54 @@ const allFleets: Fleet[] = [
     bagCapacity: 4
   },
   {
-    id: '5',
-    title: 'MERCEDES V CLASS',
-    price: 0,
-    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    id: '2',
+    title: 'Mercedes-Benz S class',
+    price: 150,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4
   },
   {
-    id: '6',
-    title: 'BMW X7',
-    price: 0,
-    imageUrl: 'https://images.unsplash.com/photo-1622294891694-07a7ebbd9f37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    id: '3',
+    title: 'Mercedes-Benz Maybach S680',
+    price: 350,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png',
     passengers: 4,
-    interior: 'Black Leather',
+    interior: 'Exclusive Leather',
     wifi: 'Upon Request',
     bagCapacity: 4
+  },
+  {
+    id: '4',
+    title: 'Mercedes-Benz V class',
+    price: 120,
+    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    passengers: 6,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 6
+  },
+  {
+    id: '5',
+    title: 'Mercedes-Benz VIP Sprinter',
+    price: 300,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    passengers: 8,
+    interior: 'VIP Leather',
+    wifi: 'Yes',
+    bagCapacity: 8
+  },
+  {
+    id: '6',
+    title: 'Mercedes-Benz Sprinter 11-14PAX',
+    price: 180,
+    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    passengers: 14,
+    interior: 'Leather',
+    wifi: 'Yes',
+    bagCapacity: 14
   }
 ];
 
