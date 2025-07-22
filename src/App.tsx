@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/ContactPage";
-import PropertiesPage from "./pages/PropertiesPage";
-import PropertyDetailsPage from "./pages/PropertyDetailsPage";
+import FleetsPage from "./pages/FleetsPage";
+import FleetsDetailsPage from "./pages/FleetsDetailsPage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -25,8 +25,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
-            <Route path="/fleets" element={<Layout><PropertiesPage /></Layout>} />
-            <Route path="/fleets/:id" element={<Layout><PropertyDetailsPage /></Layout>} />
+            <Route path="/fleets" element={<Layout><FleetsPage /></Layout>} />
+            <Route path="/fleets/:id" element={<Layout><FleetsDetailsPage /></Layout>} />
             <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
             <Route path="/about" element={<Layout><AboutPage /></Layout>} />
             <Route path="/contact" element={<Layout><ContactPage /></Layout>} />

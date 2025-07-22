@@ -26,7 +26,7 @@ const FleetCard: React.FC<FleetCardProps> = ({ fleet }) => {
   
   return (
     <Card className="overflow-hidden border-none shadow-lg hover-lift">
-      <Link to={`/properties/${fleet.id}`}>
+      <Link to={`/fleets/${fleet.id}`}>
         <div className="relative h-60 overflow-hidden">
           <img 
             src={fleet.imageUrl} 
@@ -71,7 +71,7 @@ const FleetCard: React.FC<FleetCardProps> = ({ fleet }) => {
           </li>
         </ul>
         
-        <Link to={`/properties/${fleet.id}`}>
+        <Link to={`/fleets/${fleet.id}`}>
           <Button 
             variant="outline" 
             className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
