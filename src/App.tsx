@@ -11,6 +11,8 @@ import FleetsPage from "./pages/FleetsPage";
 import FleetsDetailsPage from "./pages/FleetsDetailsPage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Layout from "./components/layout/Layout";
 
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
             <Route path="/about" element={<Layout><AboutPage /></Layout>} />
             <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    historyApiFallback: true, // Fix for client-side routing
   },
   plugins: [
     react(),

@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/properties" className="hover:text-primary transition-colors">
+                <Link to="/fleets" className="hover:text-primary transition-colors">
                   Our Fleet
                 </Link>
               </li>
@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-wrap justify-between items-center pt-10 mt-10 border-t border-white/10 text-resort-white/70">
           <p>&copy; {currentYear} MR Drivers. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="hover:text-primary transition-colors">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="hover:text-primary transition-colors">
-              Terms of Service
+            <Link to="/terms-conditions" className="hover:text-primary transition-colors">
+              Terms & Conditions
             </Link>
           </div>
         </div>

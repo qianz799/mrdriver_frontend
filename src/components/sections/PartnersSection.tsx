@@ -6,7 +6,7 @@ const reviewsData = [
   {
     id: 1,
     rating: 5,
-    review: "MrDrivers is one of my best luxury fleet service so far, when their cars appeared at my front door together, all my family members were like jaw-dropping, drivers were on time, polite and well dressed, cars were so luxury, and super clean. Yesss, definitely and highly recommend Mr Drivers Chauffeur to anyone is looking for super VIP transfer service."
+    review: "MrDrivers is one of my best luxury fleet service so far, when their cars appeared at my front door together, all my family members were like jaw-dropping, drivers were on time, polite and well dressed, cars were so luxury, and super clean. Yesss, definitely and highly recommend MrDrivers Chauffeur to anyone is looking for super VIP transfer service."
   },
   {
     id: 2,
