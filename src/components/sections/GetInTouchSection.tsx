@@ -23,7 +23,7 @@ const GetInTouchSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Address</h3>
-                  <p className="text-resort-navy/80">123 Main Street, Sydney, NSW 2000, Australia</p>
+                  <p className="text-resort-navy/80">100 Haris St, Pyromnt NSW 2009 Australia</p>
                 </div>
               </div>
               
@@ -33,7 +33,7 @@ const GetInTouchSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-resort-navy/80">+61 123 456 789</p>
+                  <p className="text-resort-navy/80">+61 1300 618 241</p>
                 </div>
               </div>
               

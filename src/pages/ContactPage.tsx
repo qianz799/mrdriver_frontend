@@ -32,14 +32,14 @@ const ContactPage = () => {
                   <MapPin className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <h3 className="font-bold mb-1">Address</h3>
-                    <p>123 Paradise Road, Gold Coast, Queensland, Australia</p>
+                    <p>100 Haris St, Pyromnt NSW 2009 Australia</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p>+61 123 456 789</p>
+                    <p>+61 1300 618 241</p>
                   </div>
                 </li>
                 <li className="flex items-start">

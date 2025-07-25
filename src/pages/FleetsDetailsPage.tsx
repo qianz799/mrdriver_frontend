@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -13,15 +13,27 @@ const fleetData = [
     title: 'Mercedes-Benz GLS',
     location: 'Sydney, NSW',
     price: 120,
-    imageUrl: 'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/fleets/1/Front.jpeg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4,
     description: 'Experience supreme luxury and comfort with our Mercedes-Benz GLS. This premium SUV offers a sophisticated driving experience combined with advanced technology and safety features. Perfect for corporate transfers, airport pickups, or special events.',
-    features: ['Luxury Interior', 'Climate Control', 'Premium Sound System', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
-    gallery: [
-      'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    features: [
+      'Luxury Interior',
+      'Climate Control',
+      'Premium Sound System',
+      'Tinted Windows',
+      'Professional Chauffeur',
+      'Complimentary Water',
+      'USB Charging',
+      'Sanitized After Each Use'
+    ],
+    gallery: ['/images/fleets/1/Front.jpeg'],
+    interiorImages: [
+      '/images/fleets/1/Interior1.jpg',
+      '/images/fleets/1/Interior2.jpg',
+      '/images/fleets/1/Interior3.jpg',
     ]
   },
   {
@@ -29,7 +41,7 @@ const fleetData = [
     title: 'Mercedes-Benz S class',
     location: 'Sydney, NSW',
     price: 150,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png',
+    image: '/images/fleets/2/Front.jpeg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -37,7 +49,11 @@ const fleetData = [
     description: 'The Mercedes-Benz S class sets the standard for luxury sedans. Enjoy unmatched comfort, advanced technology, and a smooth ride for your most important journeys.',
     features: ['Executive Seating', 'Ambient Lighting', 'Burmester Audio', 'Rear Seat Entertainment', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png'
+      '/images/fleets/2/Front.jpeg'
+    ],
+    interiorImages: [
+      '/images/fleets/2/Interior1.jpg',
+      '/images/fleets/2/Interior2.jpg',
     ]
   },
   {
@@ -45,7 +61,7 @@ const fleetData = [
     title: 'Mercedes-Benz Maybach S680',
     location: 'Sydney, NSW',
     price: 350,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png',
+    image: '/images/fleets/3/Front.jpeg',
     passengers: 4,
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
@@ -53,7 +69,14 @@ const fleetData = [
     description: 'The ultimate in luxury, the Maybach S680 offers a first-class experience with every detail. Perfect for VIPs, weddings, and special occasions.',
     features: ['First-Class Cabin', 'Reclining Rear Seats', 'Champagne Fridge', 'Burmester High-End 4D Surround Sound', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png'
+      '/images/fleets/3/Front.jpeg'
+    ],
+    interiorImages: [
+      '/images/fleets/3/Interior1.jpg',
+      '/images/fleets/3/Interior2.jpg',
+      '/images/fleets/3/Interior3.jpg',
+      '/images/fleets/3/Interior4.jpg',
+      '/images/fleets/3/Interior5.jpg',
     ]
   },
   {
@@ -61,7 +84,7 @@ const fleetData = [
     title: 'Mercedes-Benz V class',
     location: 'Sydney, NSW',
     price: 120,
-    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/fleets/4/Front.jpeg',
     passengers: 6,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -69,7 +92,12 @@ const fleetData = [
     description: 'The Mercedes-Benz V class is the perfect choice for group travel, offering space, comfort, and luxury for up to 6 passengers.',
     features: ['Spacious Cabin', 'Flexible Seating', 'Premium Sound', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      '/images/fleets/4/Front.jpeg'
+    ],
+    interiorImages: [
+      '/images/fleets/4/Interior1.jpg',
+      '/images/fleets/4/Interior2.jpg',
+
     ]
   },
   {
@@ -77,7 +105,7 @@ const fleetData = [
     title: 'Mercedes-Benz VIP Sprinter',
     location: 'Sydney, NSW',
     price: 300,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
     passengers: 8,
     interior: 'VIP Leather',
     wifi: 'Yes',
@@ -86,6 +114,13 @@ const fleetData = [
     features: ['VIP Cabin', 'Conference Seating', 'Onboard WiFi', 'Entertainment System', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
       'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
+    ],
+    interiorImages: [
+      '/images/fleets/5/Interior1.jpg',
+      '/images/fleets/5/Interior2.jpg',
+      '/images/fleets/5/Interior3.jpg',
+      '/images/fleets/5/Interior4.jpg',
+      '/images/fleets/5/Interior5.jpg',
     ]
   },
   {
@@ -93,7 +128,7 @@ const fleetData = [
     title: 'Mercedes-Benz Sprinter 11-14PAX',
     location: 'Sydney, NSW',
     price: 180,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
     passengers: 14,
     interior: 'Leather',
     wifi: 'Yes',
@@ -102,6 +137,13 @@ const fleetData = [
     features: ['Large Cabin', 'Flexible Seating', 'Onboard WiFi', 'Luggage Space', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
       'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
+    ],
+    interiorImages: [
+      '/images/fleets/6/Interior1.jpg',
+      '/images/fleets/6/Interior2.jpg',
+      '/images/fleets/6/Interior3.jpg',
+      '/images/fleets/6/Interior4.jpg',
+      '/images/fleets/6/Interior5.jpg',
     ]
   }
 ];
@@ -109,8 +151,8 @@ const fleetData = [
 const FleetsDetailsPage = () => {
   const { t } = useLanguage();
   const { id } = useParams<{ id: string }>();
-  
-  const vehicle = fleetData.find(p => p.id === id);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  const vehicle = fleetData.find((v) => v.id === id);
   
   if (!vehicle) {
     return (
@@ -124,14 +166,20 @@ const FleetsDetailsPage = () => {
       </div>
     );
   }
-  
+
+  const { interiorImages } = vehicle;
+  const totalImages = interiorImages.length;
+
+  const goPrev = () => setGalleryIndex((prev) => (prev - 1 + totalImages) % totalImages);
+  const goNext = () => setGalleryIndex((prev) => (prev + 1) % totalImages);
+
   return (
     <div className="pt-24">
       {/* Hero Section */}
       <div 
         className="h-[50vh] relative"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${vehicle.imageUrl})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${vehicle.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -157,6 +205,7 @@ const FleetsDetailsPage = () => {
           <div className="lg:col-span-2">
             {/* Vehicle Details */}
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+              {/* Vehicle Details */}
               <div className="flex flex-wrap items-center pb-6 mb-6 border-b">
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
@@ -188,16 +237,32 @@ const FleetsDetailsPage = () => {
               </ul>
               
               <h2 className="text-2xl font-bold font-playfair mb-4">Gallery</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {vehicle.gallery.map((image, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden h-48">
-                    <img 
-                      src={image} 
-                      alt={`${vehicle.title} - ${index + 1}`} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
+              <div className="flex items-center justify-center mb-8">
+                <button
+                  onClick={goPrev}
+                  className="px-3 py-2 bg-gray-200 rounded-full mr-4 disabled:opacity-50"
+                  disabled={totalImages <= 1}
+                  aria-label="Previous image"
+                >
+                  &#8592;
+                </button>
+                <div className="w-[400px] h-[250px] bg-gray-100 rounded-lg shadow overflow-hidden flex items-center justify-center">
+                  <img
+                    src={interiorImages[galleryIndex]}
+                    alt={`${vehicle.title} Interior ${galleryIndex + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    onError={e => { e.currentTarget.src = '/images/fleets/default.jpg'; }}
+                  />
+                </div>
+                <button
+                  onClick={goNext}
+                  className="px-3 py-2 bg-gray-200 rounded-full ml-4 disabled:opacity-50"
+                  disabled={totalImages <= 1}
+                  aria-label="Next image"
+                >
+                  &#8594;
+                </button>
               </div>
             </div>
           </div>

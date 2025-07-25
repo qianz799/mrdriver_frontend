@@ -10,7 +10,7 @@ export interface Fleet {
   id: string;
   title: string;
   price: number;
-  imageUrl: string;
+  image: string;
   passengers: number;
   interior: string;
   wifi: string;
@@ -29,7 +29,7 @@ const FleetCard: React.FC<FleetCardProps> = ({ fleet }) => {
       <Link to={`/fleets/${fleet.id}`}>
         <div className="relative h-60 overflow-hidden">
           <img 
-            src={fleet.imageUrl} 
+            src={fleet.image} 
             alt={fleet.title} 
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />

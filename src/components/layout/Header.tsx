@@ -144,7 +144,7 @@ const Header: React.FC = () => {
             <div className="text-center mb-6">
               <div className="flex items-center justify-center mb-4">
                 <Phone className="h-4 w-4 mr-2" />
-                <span className="text-resort-navy">CONTACT: 1300 618 241</span>
+                <span className="text-resort-navy">CONTACT: +61 1300 618 241</span>
               </div>
               <div className="flex items-center justify-center">
                 <Mail className="h-4 w-4 mr-2" />

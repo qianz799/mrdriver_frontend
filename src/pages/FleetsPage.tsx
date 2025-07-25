@@ -12,17 +12,27 @@ const allFleets: Fleet[] = [
     id: '1',
     title: 'Mercedes-Benz GLS',
     price: 120,
-    imageUrl: 'https://images.unsplash.com/photo-1674468574946-774294df14de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'mrdriver_frontend/public/images/fleets/1/Front.jpg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: 4
   },
   {
+    id: '7',
+    title: 'Mercedes-Benz Maybach GLS 600',
+    price: 180,
+    image: 'mrdriver_frontend/public/images/fleets/7/Front.jpg',
+    passengers: 4,
+    interior: 'Black Leather',
+    wifi: 'Yes',
+    bagCapacity: 4
+  },
+  {
     id: '2',
     title: 'Mercedes-Benz S class',
     price: 150,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/s-class/sedan-v223-fl-pi/modeloverview/01-2023/images/mercedes-benz-s-class-sedan-v223-modeloverview-696x392-01-2023.png',
+    image: 'mrdriver_frontend/public/images/fleets/2/Front.jpg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -31,18 +41,18 @@ const allFleets: Fleet[] = [
   {
     id: '3',
     title: 'Mercedes-Benz Maybach S680',
-    price: 350,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/passengercars/cars/mercedes-maybach/s-class-x223-fl-pi/modeloverview/01-2023/images/mercedes-maybach-s-class-x223-modeloverview-696x392-01-2023.png',
-    passengers: 4,
+    price: 250,
+    image: 'mrdriver_frontend/public/images/fleets/3/Front.jpg',
+    passengers: 3,
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: 2
   },
   {
     id: '4',
     title: 'Mercedes-Benz V class',
     price: 120,
-    imageUrl: 'https://images.unsplash.com/photo-1617694977288-c3161aece8ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'mrdriver_frontend/public/images/fleets/4/Front.jpg',
     passengers: 6,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -52,7 +62,7 @@ const allFleets: Fleet[] = [
     id: '5',
     title: 'Mercedes-Benz VIP Sprinter',
     price: 300,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    image: 'mrdriver_frontend/public/images/fleets/5/Front.jpg',
     passengers: 8,
     interior: 'VIP Leather',
     wifi: 'Yes',
@@ -62,7 +72,7 @@ const allFleets: Fleet[] = [
     id: '6',
     title: 'Mercedes-Benz Sprinter 11-14PAX',
     price: 180,
-    imageUrl: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
     passengers: 14,
     interior: 'Leather',
     wifi: 'Yes',
@@ -94,7 +104,7 @@ const FleetsPage = () => {
     <div className="pt-24">
       <div className="container mx-auto section-padding">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold font-playfair mb-4">Our Fleet</h1>
+          <h1 className="text-4xl font-bold font-playfair mb-4">Our Fleets</h1>
           <p className="text-resort-navy/70 max-w-2xl mx-auto">
             Discover our collection of luxury vehicles for your premium transportation needs
           </p>
