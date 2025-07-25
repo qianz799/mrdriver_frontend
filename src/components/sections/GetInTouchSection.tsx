@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ContactForm from '@/components/forms/ContactForm';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const GetInTouchSection = () => {
   return (
@@ -44,6 +44,16 @@ const GetInTouchSection = () => {
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
                   <p className="text-resort-navy/80">info@mrdrivers.com.au</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-10 h-10 rounded-full bg-resort-navy/10 flex items-center justify-center mr-4">
+                  <Clock className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">Operating Hours</h3>
+                  <p className="text-resort-navy/80">Available 24/7</p>
                 </div>
               </div>
             </div>

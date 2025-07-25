@@ -14,10 +14,10 @@ export interface Fleet {
   title: string;
   price: number;
   image: string;
-  passengers: number;
+  passengers: string;
   interior: string;
   wifi: string;
-  bagCapacity: number;
+  bagCapacity: string;
 }
 
 const fleets: Fleet[] = [
@@ -25,31 +25,31 @@ const fleets: Fleet[] = [
     id: '1',
     title: 'Mercedes-Benz GLS',
     price: 120,
-    image: 'mrdriver_frontend/public/images/fleets/1/Front.jpeg',
-    passengers: 4,
+    image: '/mrdriver_frontend/images/fleets/1/Front.jpg',
+    passengers: '4',
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: '4'
   },
   {
     id: '2',
     title: 'Mercedes-Benz Maybach S680',
     price: 350,
-    image: 'mrdriver_frontend/public/images/fleets/2/Front.jpeg',
-    passengers: 4,
+    image: '/mrdriver_frontend/images/fleets/2/Front.jpg',
+    passengers: '3',
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: '2'
   },
   {
     id: '3',
     title: 'Mercedes-Benz S class',
     price: 150,
-    image: 'mrdriver_frontend/public/images/fleets/3/Front.jpeg',
-    passengers: 4,
+    image: '/mrdriver_frontend/images/fleets/3/Front.jpg',
+    passengers: '3',
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: '3'
   }
 ];
 

@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Users, Shield, Wifi, Briefcase, Calendar, ArrowLeft } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Users, Shield, Wifi, Briefcase, Calendar, ArrowLeft, ZoomIn, ZoomOut, X, DollarSign, Package } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 
 // Mock data - in a real app, this would come from an API
@@ -13,7 +14,7 @@ const fleetData = [
     title: 'Mercedes-Benz GLS',
     location: 'Sydney, NSW',
     price: 120,
-    image: '/images/fleets/1/Front.jpeg',
+    image: '/images/fleets/1/Front.jpg',
     passengers: 4,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -29,11 +30,11 @@ const fleetData = [
       'USB Charging',
       'Sanitized After Each Use'
     ],
-    gallery: ['/images/fleets/1/Front.jpeg'],
+    gallery: ['/images/fleets/1/Front.jpg'],
     interiorImages: [
-      '/images/fleets/1/Interior1.jpg',
-      '/images/fleets/1/Interior2.jpg',
-      '/images/fleets/1/Interior3.jpg',
+      '/mrdriver_frontend/images/fleets/1/Interior1.jpg',
+      '/mrdriver_frontend/images/fleets/1/Interior2.jpg',
+      '/mrdriver_frontend/images/fleets/1/Interior3.jpg',
     ]
   },
   {
@@ -41,19 +42,19 @@ const fleetData = [
     title: 'Mercedes-Benz S class',
     location: 'Sydney, NSW',
     price: 150,
-    image: '/images/fleets/2/Front.jpeg',
-    passengers: 4,
+    image: '/images/fleets/2/Front.jpg',
+    passengers: 3,
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4,
+    bagCapacity: 3,
     description: 'The Mercedes-Benz S class sets the standard for luxury sedans. Enjoy unmatched comfort, advanced technology, and a smooth ride for your most important journeys.',
     features: ['Executive Seating', 'Ambient Lighting', 'Burmester Audio', 'Rear Seat Entertainment', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      '/images/fleets/2/Front.jpeg'
+      '/images/fleets/2/Front.jpg'
     ],
     interiorImages: [
-      '/images/fleets/2/Interior1.jpg',
-      '/images/fleets/2/Interior2.jpg',
+      '/mrdriver_frontend/images/fleets/2/Interior1.jpg',
+      '/mrdriver_frontend/images/fleets/2/Interior2.jpg',
     ]
   },
   {
@@ -61,22 +62,21 @@ const fleetData = [
     title: 'Mercedes-Benz Maybach S680',
     location: 'Sydney, NSW',
     price: 350,
-    image: '/images/fleets/3/Front.jpeg',
-    passengers: 4,
+    image: '/images/fleets/3/Front.jpg',
+    passengers: 3,
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4,
+    bagCapacity: 2,
     description: 'The ultimate in luxury, the Maybach S680 offers a first-class experience with every detail. Perfect for VIPs, weddings, and special occasions.',
     features: ['First-Class Cabin', 'Reclining Rear Seats', 'Champagne Fridge', 'Burmester High-End 4D Surround Sound', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      '/images/fleets/3/Front.jpeg'
+      '/images/fleets/3/Front.jpg'
     ],
     interiorImages: [
-      '/images/fleets/3/Interior1.jpg',
-      '/images/fleets/3/Interior2.jpg',
-      '/images/fleets/3/Interior3.jpg',
-      '/images/fleets/3/Interior4.jpg',
-      '/images/fleets/3/Interior5.jpg',
+      '/mrdriver_frontend/images/fleets/3/Interior2.jpeg',
+      '/mrdriver_frontend/images/fleets/3/Interior3.jpg',
+      '/mrdriver_frontend/images/fleets/3/Interior4.jpeg',
+      '/mrdriver_frontend/images/fleets/3/Interior5.jpeg',
     ]
   },
   {
@@ -84,7 +84,7 @@ const fleetData = [
     title: 'Mercedes-Benz V class',
     location: 'Sydney, NSW',
     price: 120,
-    image: '/images/fleets/4/Front.jpeg',
+    image: '/images/fleets/4/Front.jpg',
     passengers: 6,
     interior: 'Black Leather',
     wifi: 'Upon Request',
@@ -92,12 +92,11 @@ const fleetData = [
     description: 'The Mercedes-Benz V class is the perfect choice for group travel, offering space, comfort, and luxury for up to 6 passengers.',
     features: ['Spacious Cabin', 'Flexible Seating', 'Premium Sound', 'Tinted Windows', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
-      '/images/fleets/4/Front.jpeg'
+      '/images/fleets/4/Front.jpg'
     ],
     interiorImages: [
-      '/images/fleets/4/Interior1.jpg',
-      '/images/fleets/4/Interior2.jpg',
-
+      '/mrdriver_frontend/images/fleets/4/Interior1.jpg',
+      '/mrdriver_frontend/images/fleets/4/Interior2.jpg',
     ]
   },
   {
@@ -105,53 +104,78 @@ const fleetData = [
     title: 'Mercedes-Benz VIP Sprinter',
     location: 'Sydney, NSW',
     price: 300,
-    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
+    image: '/images/fleets/5/Front.jpg',
     passengers: 8,
     interior: 'VIP Leather',
-    wifi: 'Yes',
+    wifi: 'Upon Request',
     bagCapacity: 8,
     description: 'Travel in style with the Mercedes-Benz VIP Sprinter, featuring a luxurious interior and amenities for business or leisure groups.',
     features: ['VIP Cabin', 'Conference Seating', 'Onboard WiFi', 'Entertainment System', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
       'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
     ],
-    interiorImages: [
-      '/images/fleets/5/Interior1.jpg',
-      '/images/fleets/5/Interior2.jpg',
-      '/images/fleets/5/Interior3.jpg',
-      '/images/fleets/5/Interior4.jpg',
-      '/images/fleets/5/Interior5.jpg',
-    ]
+    interiorImages: []
   },
   {
     id: '6',
     title: 'Mercedes-Benz Sprinter 11-14PAX',
     location: 'Sydney, NSW',
     price: 180,
-    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
-    passengers: 14,
+    image: '/images/fleets/6/Front.jpg',
+    passengers: 11-14,
     interior: 'Leather',
-    wifi: 'Yes',
-    bagCapacity: 14,
+    wifi: 'Upon Request',
+    bagCapacity: 11-14,
     description: 'Ideal for larger groups, the Mercedes-Benz Sprinter 11-14PAX offers comfort, space, and convenience for up to 14 passengers.',
     features: ['Large Cabin', 'Flexible Seating', 'Onboard WiFi', 'Luggage Space', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [
       'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png'
     ],
+    interiorImages: []
+  },
+  {
+    id: '7',
+    title: 'Mercedes-Benz Maybach GLS 600',
+    location: 'Sydney, NSW',
+    price: 250,
+    image: '/images/fleets/7/Front.jpg',
+    passengers: 3,
+    interior: 'Black Leather',
+    wifi: 'Upon Request',
+    bagCapacity: 3,
+    description: 'Step into an unparalleled world of opulence with the Mercedes-Benz Maybach GLS 600. This ultra-luxury SUV is a seamless fusion of power, elegance, and refined craftsmanship. Designed to cater to those with the highest standards, it offers a serene ride, a commanding presence, and features tailored for a truly first-class travel experience. Ideal for executive transfers, VIP airport pick-ups, and distinguished occasions where prestige matters.',
+    features: [
+      'Executive Rear Seating',
+      'Massage & Recline Function',
+      'Burmester® High-End 3D Surround Sound',
+      'Panoramic Sunroof',
+      'Ambient Lighting (64 Colors)',
+      'Professional Chauffeur',
+      'Complimentary Refreshments',
+      'Advanced Climate Control',
+      'USB-C Fast Charging',
+      'Wireless Device Integration',
+      'Sanitized After Each Use',
+      'Adaptive Air Suspension for Ultra Smooth Ride',
+      'Discreet Privacy Glass'
+    ],
+  
+    gallery: ['/images/fleets/1/Front.jpg'],
     interiorImages: [
-      '/images/fleets/6/Interior1.jpg',
-      '/images/fleets/6/Interior2.jpg',
-      '/images/fleets/6/Interior3.jpg',
-      '/images/fleets/6/Interior4.jpg',
-      '/images/fleets/6/Interior5.jpg',
+      '/mrdriver_frontend/images/fleets/7/Interior1.jpg',
+      '/mrdriver_frontend/images/fleets/7/Interior2.jpg',
+      '/mrdriver_frontend/images/fleets/7/Interior3.jpg',
+      '/mrdriver_frontend/images/fleets/7/Interior4.jpg',
     ]
-  }
+  },
 ];
 
 const FleetsDetailsPage = () => {
   const { t } = useLanguage();
   const { id } = useParams<{ id: string }>();
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
   const vehicle = fleetData.find((v) => v.id === id);
   
   if (!vehicle) {
@@ -173,15 +197,30 @@ const FleetsDetailsPage = () => {
   const goPrev = () => setGalleryIndex((prev) => (prev - 1 + totalImages) % totalImages);
   const goNext = () => setGalleryIndex((prev) => (prev + 1) % totalImages);
 
+  const openModal = (index: number) => {
+    setModalImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const modalPrev = () => setModalImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
+  const modalNext = () => setModalImageIndex((prev) => (prev + 1) % totalImages);
+
   return (
     <div className="pt-24">
       {/* Hero Section */}
       <div 
-        className="h-[50vh] relative"
+        className="h-[50vh] relative shadow-md"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${vehicle.image})`,
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.2),
+              rgba(0, 0, 0, 0.4)
+            ),
+            url('/mrdriver_frontend/images/about/background.png')
+          `,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center bottom',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -203,23 +242,39 @@ const FleetsDetailsPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Vehicle Details */}
+            {/* Vehicle Details Card */}
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-              {/* Vehicle Details */}
-              <div className="flex flex-wrap items-center pb-6 mb-6 border-b">
-                <div className="flex items-center space-x-4">
+              <div className="flex flex-wrap items-center justify-between pb-6 mb-6 border-b">
+                <div className="flex items-center space-x-6">
+                  {/* 1. Passengers */}
                   <div className="flex items-center">
                     <Users className="h-5 w-5 text-primary mr-1" />
                     <span>{vehicle.passengers} Passengers</span>
                   </div>
+
+                  {/* 2. Bag Capacity */}
+                  <div className="flex items-center">
+                    <Package className="h-5 w-5 text-primary mr-1" />
+                    <span>{vehicle.bagCapacity} Bags</span>
+                  </div>
+
+                  {/* 3. Interior */}
                   <div className="flex items-center">
                     <Shield className="h-5 w-5 text-primary mr-1" />
                     <span>{vehicle.interior}</span>
                   </div>
+
+                  {/* 4. WiFi */}
                   <div className="flex items-center">
                     <Wifi className="h-5 w-5 text-primary mr-1" />
                     <span>WiFi: {vehicle.wifi}</span>
                   </div>
+                </div>
+
+                {/* 5. Price - aligned to the right */}
+                <div className="flex items-center">
+                  <DollarSign className="h-5 w-5 text-primary mr-1" />
+                  <span className="font-semibold">From ${vehicle.price}</span>
                 </div>
               </div>
               
@@ -237,33 +292,99 @@ const FleetsDetailsPage = () => {
               </ul>
               
               <h2 className="text-2xl font-bold font-playfair mb-4">Gallery</h2>
-              <div className="flex items-center justify-center mb-8">
-                <button
-                  onClick={goPrev}
-                  className="px-3 py-2 bg-gray-200 rounded-full mr-4 disabled:opacity-50"
-                  disabled={totalImages <= 1}
-                  aria-label="Previous image"
-                >
-                  &#8592;
-                </button>
-                <div className="w-[400px] h-[250px] bg-gray-100 rounded-lg shadow overflow-hidden flex items-center justify-center">
-                  <img
-                    src={interiorImages[galleryIndex]}
-                    alt={`${vehicle.title} Interior ${galleryIndex + 1}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    onError={e => { e.currentTarget.src = '/images/fleets/default.jpg'; }}
-                  />
+              {totalImages > 0 ? (
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-8 gap-4">
+                  <button
+                    onClick={goPrev}
+                    className="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-full sm:mr-4 disabled:opacity-50 transition-colors order-2 sm:order-1"
+                    disabled={totalImages <= 1}
+                    aria-label="Previous image"
+                  >
+                    &#8592;
+                  </button>
+                  <div className="relative w-full max-w-[800px] h-[300px] sm:h-[400px] md:h-[500px] bg-gray-100 rounded-lg shadow overflow-hidden flex items-center justify-center group cursor-pointer order-1 sm:order-2"
+                       onClick={() => openModal(galleryIndex)}>
+                    <img
+                      src={interiorImages[galleryIndex]}
+                      alt={`${vehicle.title} Interior ${galleryIndex + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
+                      onError={e => { e.currentTarget.src = '/placeholder.svg'; }}
+                    />
+                    {/* Zoom icon overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                      <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    {/* Image counter */}
+                    <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                      {galleryIndex + 1}/{totalImages}
+                    </div>
+                  </div>
+                  <button
+                    onClick={goNext}
+                    className="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-full sm:ml-4 disabled:opacity-50 transition-colors order-3"
+                    disabled={totalImages <= 1}
+                    aria-label="Next image"
+                  >
+                    &#8594;
+                  </button>
                 </div>
-                <button
-                  onClick={goNext}
-                  className="px-3 py-2 bg-gray-200 rounded-full ml-4 disabled:opacity-50"
-                  disabled={totalImages <= 1}
-                  aria-label="Next image"
-                >
-                  &#8594;
-                </button>
-              </div>
+              ) : (
+                <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] bg-gray-100 rounded-lg shadow overflow-hidden flex items-center justify-center mb-8">
+                  <p className="text-gray-500">No interior images available</p>
+                </div>
+              )}
+
+              {/* Modal for full-screen image view */}
+              <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+                <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-none">
+                  <div className="relative h-full flex items-center justify-center">
+                    {/* Close button */}
+                    <button
+                      onClick={() => setIsModalOpen(false)}
+                      className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+                      aria-label="Close"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+
+                    {/* Previous button */}
+                    {totalImages > 1 && (
+                      <button
+                        onClick={modalPrev}
+                        className="absolute left-4 z-40 p-3 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+                        aria-label="Previous image"
+                      >
+                        &#8592;
+                      </button>
+                    )}
+
+                    {/* Image */}
+                    <img
+                      src={interiorImages[modalImageIndex]}
+                      alt={`${vehicle.title} Interior ${modalImageIndex + 1}`}
+                      className="max-w-full max-h-full object-contain"
+                      onError={e => { e.currentTarget.src = '/placeholder.svg'; }}
+                    />
+
+                    {/* Next button */}
+                    {totalImages > 1 && (
+                      <button
+                        onClick={modalNext}
+                        className="absolute right-4 z-40 p-3 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+                        aria-label="Next image"
+                      >
+                        &#8594;
+                      </button>
+                    )}
+
+                    {/* Image counter */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full">
+                      {modalImageIndex + 1} / {totalImages}
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
           

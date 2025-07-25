@@ -52,20 +52,19 @@ const ContactPage = () => {
                 <li className="flex items-start">
                   <Clock className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
-                    <h3 className="font-bold mb-1">Office Hours</h3>
-                    <p>Monday to Friday: 9am - 6pm</p>
-                    <p>Saturday: 10am - 4pm</p>
-                    <p>Sunday: Closed</p>
+                    <h3 className="font-bold mb-1">Operating Hours</h3>
+                    <p>Available 24/7</p>
                   </div>
                 </li>
               </ul>
             </div>
             
-            <div className="h-64 bg-gray-200 rounded-lg overflow-hidden">
-              {/* Placeholder for Google map */}
-              <div className="w-full h-full flex items-center justify-center bg-resort-blue/20">
-                <p className="text-center text-resort-navy">Google Map would be embedded here</p>
-              </div>
+            <div className="h-80 bg-gray-200 rounded-lg overflow-hidden">
+              <img 
+                src="/mrdriver_frontend/images/about/googlemap.png" 
+                alt="Google Map Location" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

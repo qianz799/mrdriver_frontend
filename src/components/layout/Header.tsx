@@ -38,7 +38,7 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { path: '/', label: 'home' },
-    { path: '/fleets', label: 'fleets' },
+    { path: '/fleets', label: 'Fleets' },
     { path: '/services', label: 'services' },
     { path: '/about', label: 'about' },
     { path: '/contact', label: 'contact' },
@@ -56,11 +56,11 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to="/" className="text-resort-navy z-50 flex items-center">
               <img 
-                src="public/lovable-uploads/0d225578-b23e-4152-9cd8-b0725748cf66.png" 
+                src="/mrdriver_frontend/images/logo/logo2.jpg" 
                 alt="MrDrivers Logo" 
                 className="h-10 mr-3" 
               />
-              <h1 className="text-2xl font-bold font-playfair">Mr Drivers</h1>
+              <h1 className="text-2xl font-bold font-playfair">MrDrivers</h1>
             </Link>
             
             <div className="hidden md:flex items-center ml-6 text-sm text-resort-navy/80">

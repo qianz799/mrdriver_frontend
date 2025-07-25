@@ -47,9 +47,9 @@ const AboutSection = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-md">
+            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
               <img 
-                src="public/lovable-uploads/7b2e42d9-14a9-49fb-ac3e-8e518efea6de.png" 
+                src="/mrdriver_frontend/images/about/aboutdrivers.png" 
                 alt="Luxury Vehicle Interior" 
                 className="w-full h-auto object-cover"
               />

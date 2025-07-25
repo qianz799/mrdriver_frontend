@@ -12,71 +12,71 @@ const allFleets: Fleet[] = [
     id: '1',
     title: 'Mercedes-Benz GLS',
     price: 120,
-    image: 'mrdriver_frontend/public/images/fleets/1/Front.jpg',
-    passengers: 4,
+    image: '/mrdriver_frontend/images/fleets/1/Front.jpg',
+    passengers: '4',
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: '4'
   },
   {
     id: '7',
     title: 'Mercedes-Benz Maybach GLS 600',
-    price: 180,
-    image: 'mrdriver_frontend/public/images/fleets/7/Front.jpg',
-    passengers: 4,
+    price: 250,
+    image: '/mrdriver_frontend/images/fleets/7/Front.jpg',
+    passengers: '3',
     interior: 'Black Leather',
-    wifi: 'Yes',
-    bagCapacity: 4
+    wifi: 'Upon Request',
+    bagCapacity: '3'
   },
   {
     id: '2',
     title: 'Mercedes-Benz S class',
     price: 150,
-    image: 'mrdriver_frontend/public/images/fleets/2/Front.jpg',
-    passengers: 4,
+    image: '/mrdriver_frontend/images/fleets/2/Front.jpg',
+    passengers: '3',
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 4
+    bagCapacity: '3'
   },
   {
     id: '3',
     title: 'Mercedes-Benz Maybach S680',
     price: 250,
-    image: 'mrdriver_frontend/public/images/fleets/3/Front.jpg',
-    passengers: 3,
+    image: '/mrdriver_frontend/images/fleets/3/Front.jpg',
+    passengers: '3',
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
-    bagCapacity: 2
+    bagCapacity: '2'
   },
   {
     id: '4',
     title: 'Mercedes-Benz V class',
     price: 120,
-    image: 'mrdriver_frontend/public/images/fleets/4/Front.jpg',
-    passengers: 6,
+    image: '/mrdriver_frontend/images/fleets/4/Front.jpg',
+    passengers: '6',
     interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: 6
+    bagCapacity: '6'
   },
   {
     id: '5',
     title: 'Mercedes-Benz VIP Sprinter',
     price: 300,
-    image: 'mrdriver_frontend/public/images/fleets/5/Front.jpg',
-    passengers: 8,
+    image: '/mrdriver_frontend/images/fleets/5/Front.jpg',
+    passengers: '8',
     interior: 'VIP Leather',
-    wifi: 'Yes',
-    bagCapacity: 8
+    wifi: 'Upon Request',
+    bagCapacity: '8'
   },
   {
     id: '6',
     title: 'Mercedes-Benz Sprinter 11-14PAX',
     price: 180,
-    image: 'https://www.mercedes-benz.com.au/content/dam/hq/vans/sprinter/van-w907/modeloverview/01-2023/images/mercedes-benz-sprinter-van-w907-modeloverview-696x392-01-2023.png',
-    passengers: 14,
+    image: '/mrdriver_frontend/images/fleets/6/Front.jpg',
+    passengers: '11-14',
     interior: 'Leather',
-    wifi: 'Yes',
-    bagCapacity: 14
+    wifi: 'Upon Request',
+    bagCapacity: '11-14'
   }
 ];
 

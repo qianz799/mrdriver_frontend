@@ -25,7 +25,7 @@ const ServicesPage = () => {
       title: 'Airport Transfers',
       description: 'Experience hassle-free travel with our premium airport transfer service. Our professional chauffeurs monitor flight schedules to ensure timely pickups and provide a stress-free start or end to your journey.',
       icon: <Plane className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1588867702719-08eae92ae1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imageUrl: '/mrdriver_frontend/images/service/airport-transfer.jpg',
       features: [
         'Flight monitoring',
         'Meet & greet service',
@@ -40,7 +40,7 @@ const ServicesPage = () => {
       title: 'Corporate Services',
       description: "Make a lasting impression with our corporate transportation solutions. Whether it's business meetings, airport transfers, or executive travel, we provide reliable, discreet, and professional service for all your corporate needs.",
       icon: <Building className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1560269507-c33ad6c719bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imageUrl: '/mrdriver_frontend/images/service/corporate-service.jpg',
       features: [
         'Corporate account management',
         'Executive ground transportation',
@@ -100,7 +100,7 @@ const ServicesPage = () => {
       title: 'Point-to-Point Transfers',
       description: 'Need to get from one location to another in style and comfort? Our point-to-point transfer service provides reliable, luxurious transportation whenever you need it.',
       icon: <Car className="h-6 w-6 text-white" />,
-      imageUrl: 'https://images.unsplash.com/photo-1514306191717-452ec28c7814?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imageUrl: '/mrdriver_frontend/images/service/point-to-point.jpg',
       features: [
         'Door-to-door service',
         'On-time pickups',
