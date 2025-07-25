@@ -25,6 +25,11 @@ const translations: Translations = {
     zh: '车队',
     ja: '車両',
   },
+  'fleets': {
+    en: 'Fleets',
+    zh: '车队',
+    ja: '車両',
+  },
   'contact': {
     en: 'Contact',
     zh: '联系我们',
