@@ -11,10 +11,10 @@ export interface Fleet {
   title: string;
   price: number;
   image: string;
-  passengers: number;
+  passengers: string;
   interior: string;
   wifi: string;
-  bagCapacity: number;
+  bagCapacity: string;
 }
 
 interface FleetCardProps {

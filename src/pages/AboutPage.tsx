@@ -16,7 +16,7 @@ const AboutPage = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold font-playfair mb-6">{t('about_us')}</h1>
             <p className="text-resort-navy/80 max-w-3xl mx-auto">
-              Mr Drivers is Sydney's premier luxury transportation service, 
+              MrDrivers is Sydney's premier luxury transportation service, 
               offering exceptional chauffeur-driven vehicles for all your transportation needs.
             </p>
           </div>
@@ -28,7 +28,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1616638840446-3e454cf0c1c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/mrdriver_frontend/images/about/aboutus.png" 
               alt="Our Story"
               className="w-full h-full object-cover"
             />
