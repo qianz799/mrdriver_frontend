@@ -5,24 +5,31 @@ import { Star } from 'lucide-react';
 const reviewsData = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Sarah M.",
     location: "Sydney",
     rating: 5,
-    review: "Exceptional service! The Mercedes was immaculate and the driver was professional and punctual. Will definitely use again for all my business meetings."
+    review: "MrDrivers is one of my best luxury fleet service so far, when their cars appeared at my front door together, all my family members were like jaw-dropping, drivers were on time, polite and well dressed, cars were so luxury, and super clean. Yesss, definitely and highly recommend Mr Drivers Chauffeur to anyone is looking for super VIP transfer service."
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Michael T.",
     location: "Melbourne",
     rating: 5,
-    review: "Booked for my wedding day and everything was perfect. The Maybach was stunning and made our special day even more memorable."
+    review: "The S Class was comfortable and fit all our luggage easily. Communication from Mr. Drivers was excellent (and loved they used WhatsApp which helped whilst I was overseas and couldn't use SMS). Wouldn't use any other service :)"
   },
   {
     id: 3,
-    name: "Emma Williams",
+    name: "Emma K.",
     location: "Brisbane",
     rating: 5,
-    review: "Outstanding airport transfer service. On time, comfortable, and great communication throughout. Highly recommended for business travelers."
+    review: "Great experience, staff was so accomodating, professional service, value for money, very clean and great smelling cars."
+  },
+  {
+    id: 4,
+    name: "James R.",
+    location: "Perth",
+    rating: 5,
+    review: "Amazing service with a very accommodating safe driver. We appreciate you. He never disappoints"
   }
 ];
 
