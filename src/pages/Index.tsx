@@ -9,6 +9,7 @@ import GetInTouchSection from '@/components/sections/GetInTouchSection';
 import CtaSection from '@/components/sections/CtaSection';
 import FeaturedFleet from '@/components/sections/FeaturedFleet';
 
+
 export interface Fleet {
   id: string;
   title: string;
