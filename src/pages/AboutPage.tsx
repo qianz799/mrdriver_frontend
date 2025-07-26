@@ -28,7 +28,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/mrdriver_frontend/images/about/aboutus.png" 
+              src="/images/about/aboutus.png" 
               alt="Our Story"
               className="w-full h-full object-cover"
             />

@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to="/" className="text-resort-navy z-50 flex items-center">
               <img 
-                src="/mrdriver_frontend/images/logo/logo2.jpg" 
+                src="/images/logo/logo2.jpg" 
                 alt="MrDrivers Logo" 
                 className="h-10 mr-3" 
               />

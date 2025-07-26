@@ -32,9 +32,9 @@ const fleetData = [
     ],
     gallery: ['/images/fleets/1/Front.jpg'],
     interiorImages: [
-      '/mrdriver_frontend/images/fleets/1/Interior1.jpg',
-      '/mrdriver_frontend/images/fleets/1/Interior2.jpg',
-      '/mrdriver_frontend/images/fleets/1/Interior3.jpg',
+      '/images/fleets/1/Interior1.jpg',
+      '/images/fleets/1/Interior2.jpg',
+      '/images/fleets/1/Interior3.jpg',
     ]
   },
   {
@@ -53,8 +53,8 @@ const fleetData = [
       '/images/fleets/2/Front.jpg'
     ],
     interiorImages: [
-      '/mrdriver_frontend/images/fleets/2/Interior1.jpg',
-      '/mrdriver_frontend/images/fleets/2/Interior2.jpg',
+      '/images/fleets/2/Interior1.jpg',
+      '/images/fleets/2/Interior2.jpg',
     ]
   },
   {
@@ -73,10 +73,10 @@ const fleetData = [
       '/images/fleets/3/Front.jpg'
     ],
     interiorImages: [
-      '/mrdriver_frontend/images/fleets/3/Interior2.jpeg',
-      '/mrdriver_frontend/images/fleets/3/Interior3.jpg',
-      '/mrdriver_frontend/images/fleets/3/Interior4.jpeg',
-      '/mrdriver_frontend/images/fleets/3/Interior5.jpeg',
+      '/images/fleets/3/Interior2.jpeg',
+      '/images/fleets/3/Interior3.jpg',
+      '/images/fleets/3/Interior4.jpeg',
+      '/images/fleets/3/Interior5.jpeg',
     ]
   },
   {
@@ -95,8 +95,8 @@ const fleetData = [
       '/images/fleets/4/Front.jpg'
     ],
     interiorImages: [
-      '/mrdriver_frontend/images/fleets/4/Interior1.jpg',
-      '/mrdriver_frontend/images/fleets/4/Interior2.jpg',
+      '/images/fleets/4/Interior1.jpg',
+      '/images/fleets/4/Interior2.jpg',
     ]
   },
   {
@@ -162,10 +162,10 @@ const fleetData = [
   
     gallery: ['/images/fleets/1/Front.jpg'],
     interiorImages: [
-      '/mrdriver_frontend/images/fleets/7/Interior1.jpg',
-      '/mrdriver_frontend/images/fleets/7/Interior2.jpg',
-      '/mrdriver_frontend/images/fleets/7/Interior3.jpg',
-      '/mrdriver_frontend/images/fleets/7/Interior4.jpg',
+      '/images/fleets/7/Interior1.jpg',
+      '/images/fleets/7/Interior2.jpg',
+      '/images/fleets/7/Interior3.jpg',
+      '/images/fleets/7/Interior4.jpg',
     ]
   },
 ];
@@ -217,7 +217,7 @@ const FleetsDetailsPage = () => {
               rgba(0, 0, 0, 0.2),
               rgba(0, 0, 0, 0.4)
             ),
-            url('/mrdriver_frontend/images/about/background.png')
+            url('/images/about/background.png')
           `,
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
