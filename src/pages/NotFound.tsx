@@ -4,6 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import path from 'path';
 
 const NotFound = () => {
   const location = useLocation();

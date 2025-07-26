@@ -22,15 +22,14 @@ const Footer: React.FC = () => {
               Premium transportation services across Australia. Experience luxury, comfort, and professionalism.
             </p>
             <div className="flex space-x-4 mb-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/share/1D83ExcAtw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              {/*
+              <a href="https://www.instagram.com/mrdrivers.chauffeurs?igsh=bTIwNHlxMTg0cjAw" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
+               */}
             </div>
           </div>
           
