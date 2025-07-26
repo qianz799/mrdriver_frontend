@@ -61,7 +61,7 @@ const ContactPage = () => {
             
             <div className="h-80 bg-gray-200 rounded-lg overflow-hidden">
               <img 
-                src="/mrdriver_frontend/images/about/googlemap.png" 
+                src="/images/about/googlemap.png" 
                 alt="Google Map Location" 
                 className="w-full h-full object-cover"
               />
