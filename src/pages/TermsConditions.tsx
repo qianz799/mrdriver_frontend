@@ -22,7 +22,7 @@ const TermsConditions = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-resort-navy mb-4">1. Introduction</h2>
             <p className="text-resort-navy/80 leading-relaxed">
-              MrDrivers ("we," "us," "our") provides luxury chauffeur services in Sydney, Australia, using our premium Mercedes-Benz fleet: Maybach S680 (3 passengers), S-Class (4 passengers), V-Class (6 passengers), GLS (4 passengers), custom VIP Sprinter (9 passengers, 10 seats including driver), and 11-14 PAX Sprinter (11-14 passengers). These Terms and Conditions govern our services, ensuring a professional, safe, and reliable experience. By booking with MrDrivers, you agree to these terms.
+              MrDrivers ("we," "us," "our") provides luxury chauffeur services in Sydney, Australia, using our premium Mercedes-Benz fleet: Maybach S680 (3 passengers), Maybach GLS600 (3 passengers), S-Class (3 passengers), V-Class (6 passengers), GLS (4 passengers), custom VIP Sprinter (9 passengers, 10 seats including driver), and 11-14 PAX Sprinter (11-14 passengers). These Terms and Conditions govern our services, ensuring a professional, safe, and reliable experience. By booking with MrDrivers, you agree to these terms.
             </p>
           </div>
 
@@ -127,6 +127,7 @@ const TermsConditions = () => {
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Point-to-Point Pricing (includes 10 km and 30 minutes driving time):</h3>
                 <ul className="list-disc pl-6 text-resort-navy/80 space-y-1">
                   <li>Maybach S680 (3 passengers): $350 base, $7.00/km, $3.50/min extra.</li>
+                  <li>Maybach GLS600 (3 passengers): $250 base, $5.00/km, $2.50/min extra.</li>
                   <li>S-Class (4 passengers): $150 base, $3.00/km, $1.50/min extra.</li>
                   <li>V-Class (6 passengers): $120 base, $2.40/km, $1.20/min extra.</li>
                   <li>GLS (4 passengers): $120 base, $2.40/km, $1.20/min extra.</li>
@@ -139,6 +140,7 @@ const TermsConditions = () => {
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Hourly/As-Directed Pricing (minimum 3 hours, maximum 20 km per hour, e.g., 60 km for 3 hours):</h3>
                 <ul className="list-disc pl-6 text-resort-navy/80 space-y-1">
                   <li>Maybach S680: $350/hour.</li>
+                  <li>Maybach GLS600: $250/hour.</li>
                   <li>S-Class: $150/hour.</li>
                   <li>V-Class: $120/hour.</li>
                   <li>GLS: $120/hour.</li>
@@ -150,8 +152,8 @@ const TermsConditions = () => {
               <div>
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Extra Charges (beyond included km or minutes for point-to-point, or beyond 20 km/hour for hourly bookings):</h3>
                 <ul className="list-disc pl-6 text-resort-navy/80 space-y-1">
-                  <li><strong>Per Kilometer:</strong> Maybach S680: $7.00/km, S-Class: $3.00/km, V-Class: $2.40/km, GLS: $2.40/km, VIP Sprinter: $6.00/km, 11-14 PAX Sprinter: $3.60/km.</li>
-                  <li><strong>Per Minute:</strong> Maybach S680: $3.50/min, S-Class: $1.50/min, V-Class: $1.20/min, GLS: $1.20/min, VIP Sprinter: $3.00/min, 11-14 PAX Sprinter: $1.80/min.</li>
+                  <li><strong>Per Kilometer:</strong> Maybach S680: $7.00/km, Maybach GLS600: $5.00/km, S-Class: $3.00/km, V-Class: $2.40/km, GLS: $2.40/km, VIP Sprinter: $6.00/km, 11-14 PAX Sprinter: $3.60/km.</li>
+                  <li><strong>Per Minute:</strong> Maybach S680: $3.50/min, Maybach GLS600: $2.50/min, S-Class: $1.50/min, V-Class: $1.20/min, GLS: $1.20/min, VIP Sprinter: $3.00/min, 11-14 PAX Sprinter: $1.80/min.</li>
                 </ul>
               </div>
               
@@ -160,6 +162,7 @@ const TermsConditions = () => {
                 <p className="text-resort-navy/80 mb-2">Bookings must specify accurate passenger numbers and luggage details. Maximum capacities are:</p>
                 <ul className="list-disc pl-6 text-resort-navy/80 space-y-1">
                   <li>Maybach S680 (3 passengers, 2 standard suitcases)</li>
+                  <li>Maybach GLS600 (3 passengers, 3 standard suitcases)</li>
                   <li>S-Class (4 passengers, 3 suitcases)</li>
                   <li>V-Class (6 passengers, 4 suitcases)</li>
                   <li>GLS (4 passengers, 4 suitcases)</li>
@@ -203,6 +206,7 @@ const TermsConditions = () => {
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Extra Waiting Time Charges:</h3>
                 <ul className="list-disc pl-6 text-resort-navy/80 space-y-1">
                   <li>Maybach S680: $3.50/minute.</li>
+                  <li>Maybach GLS600: $2.50/minute.</li>
                   <li>S-Class: $1.50/minute.</li>
                   <li>V-Class: $1.20/minute.</li>
                   <li>GLS: $1.20/minute.</li>
@@ -228,7 +232,7 @@ const TermsConditions = () => {
               
               <div>
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Full Refund Guarantee:</h3>
-                <p className="text-resort-navy/80">If our chauffeur is late or the vehicle does not match the booked description (e.g., expecting a VIP Sprinter but receiving another model), we provide a full refund.</p>
+                <p className="text-resort-navy/80">If our chauffeur is late or the vehicle does not match the booked description (e.g., expecting a Maybach GLS600 but receiving another model), we provide a full refund.</p>
               </div>
               
               <div>

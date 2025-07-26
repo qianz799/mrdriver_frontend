@@ -8,13 +8,13 @@ const AboutSection = () => {
   return (
     <section className="py-16 bg-resort-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-3 text-center">About MRDrivers</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-3 text-center">About MrDrivers</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-10"></div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="mb-4 text-resort-navy/80">
-              With over a decade of experience, MRDrivers has established itself as a premier transportation service provider across Australia. We pride ourselves on punctuality, professionalism, and personalized service.
+              With over a decade of experience, MrDrivers has established itself as a premier transportation service provider across Australia. We pride ourselves on punctuality, professionalism, and personalized service.
             </p>
             <p className="mb-6 text-resort-navy/80">
               Our fleet of luxury vehicles and team of experienced drivers ensure that your journey with us is comfortable, safe, and memorable.

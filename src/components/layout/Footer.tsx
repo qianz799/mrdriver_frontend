@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Company Information */}
           <div className="flex flex-col">
-            <h3 className="text-2xl font-bold mb-6 font-playfair">MR Drivers</h3>
+            <h3 className="text-2xl font-bold mb-6 font-playfair">MrDrivers</h3>
             <p className="mb-6 text-resort-white/80">
               Premium transportation services across Australia. Experience luxury, comfort, and professionalism.
             </p>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex flex-wrap justify-between items-center pt-10 mt-10 border-t border-white/10 text-resort-white/70">
-          <p>&copy; {currentYear} MR Drivers. All rights reserved.</p>
+          <p>&copy; {currentYear} MrDrivers. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy-policy" className="hover:text-primary transition-colors">
               Privacy Policy

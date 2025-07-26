@@ -37,7 +37,7 @@ const AboutPage = () => {
           <div>
             <h2 className="text-3xl font-bold font-playfair mb-6">Our Story</h2>
             <p className="mb-4">
-              Founded in 2019, Mr Drivers has quickly established itself as Sydney's premier luxury transportation service. What started as a vision to redefine chauffeur services in Sydney has grown into a trusted name for premium transportation.
+              Founded in 2019, MrDrivers has quickly established itself as Sydney's premier luxury transportation service. What started as a vision to redefine chauffeur services in Sydney has grown into a trusted name for premium transportation.
             </p>
             <p className="mb-6">
               Our mission is simple - to provide an unmatched transportation experience that combines luxury, reliability, and exceptional customer service. We don't just transport people; we create memorable experiences with every journey.
@@ -92,7 +92,7 @@ const AboutPage = () => {
       
       {/* Why Choose Us */}
       <div className="container mx-auto section-padding">
-        <h2 className="text-3xl font-bold font-playfair mb-10 text-center">Why Choose Mr Drivers?</h2>
+        <h2 className="text-3xl font-bold font-playfair mb-10 text-center">Why Choose MrDrivers?</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>

@@ -9,7 +9,7 @@ const CtaSection = () => {
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold font-playfair mb-4">Ready for a Premium Ride Experience?</h2>
         <p className="max-w-2xl mx-auto mb-8 text-lg">
-          Book your journey with MR Drivers today and experience luxury transportation at its finest.
+          Book your journey with MrDrivers today and experience luxury transportation at its finest.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="/contact">
