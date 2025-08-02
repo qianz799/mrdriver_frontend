@@ -2,7 +2,6 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ChatButton from '../chat/ChatButton';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,7 +15,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <Footer />
-      <ChatButton />
     </div>
   );
 };

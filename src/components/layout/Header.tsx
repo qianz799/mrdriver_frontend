@@ -47,7 +47,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white shadow-md py-3' : 'bg-white py-6'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -56,21 +56,32 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to="/" className="text-resort-navy z-50 flex items-center">
               <img 
-                src="/images/logo/logo3.png" 
+                src="/images/logo/logo3.jpg" 
                 alt="MrDrivers Logo" 
                 className="h-10 mr-3" 
               />
-              <h1 className="text-2xl font-bold font-playfair">MrDrivers</h1>
+               <img 
+                src="/images/logo/heading.jpg" 
+                alt="MrDrivers Text" 
+                className="h-12 mr-2" 
+              />
             </Link>
             
             <div className="hidden md:flex items-center ml-6 text-sm text-resort-navy/80">
               <div className="flex items-center mr-6">
                 <Phone className="h-4 w-4 mr-2" />
-                <span>CONTACT: 1300 618 241</span>
+                <a href="tel:1300618241" className="hover:text-primary transition-colors">
+                  CONTACT: 1300 618 241
+                </a>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>info@mrdrivers.com.au</span>
+              <Mail className="h-4 w-4 mr-2" />
+              <a
+                href="mailto:info@mrdrivers.com.au"
+                className="hover:text-primary transition-colors cursor-pointer"
+              >
+                info@mrdrivers.com.au
+              </a>
               </div>
             </div>
             
@@ -144,11 +155,18 @@ const Header: React.FC = () => {
             <div className="text-center mb-6">
               <div className="flex items-center justify-center mb-4">
                 <Phone className="h-4 w-4 mr-2" />
-                <span className="text-resort-navy">CONTACT: +61 1300 618 241</span>
+                <a href="tel:1300618241" className="text-resort-navy hover:text-primary transition-colors">
+                  CONTACT: +61 1300 618 241
+                </a>
               </div>
               <div className="flex items-center justify-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <span className="text-resort-navy">info@mrdrivers.com.au</span>
+                <a 
+                  href="mailto:info@mrdrivers.com.au" 
+                  className="text-resort-navy hover:text-primary transition-colors cursor-pointer"
+                >
+                  info@mrdrivers.com.au
+                </a>
               </div>
             </div>
             <ul className="flex flex-col space-y-6 text-center">

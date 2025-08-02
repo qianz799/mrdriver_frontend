@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/fleets" className="hover:text-primary transition-colors">
-                  Our Fleet
+                  Our Fleets
                 </Link>
               </li>
               <li>
@@ -70,11 +70,18 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-primary" />
-                <span>+61 1300 618 241</span>
+                <a href="tel:1300618241" className="hover:text-primary transition-colors">
+                  1300 618 241
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-primary" />
-                <span>info@mrdrivers.com.au</span>
+                <a
+                href="mailto:info@mrdrivers.com.au"
+                className="hover:text-primary transition-colors cursor-pointer"
+              >
+                info@mrdrivers.com.au
+              </a>
               </li>
               <li className="flex items-center">
                 <Clock className="h-5 w-5 mr-3 text-primary" />

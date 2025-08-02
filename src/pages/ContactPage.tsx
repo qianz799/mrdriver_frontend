@@ -39,15 +39,23 @@ const ContactPage = () => {
                   <Phone className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p>+61 1300 618 241</p>
+                    <p>
+                    <a href="tel:1300618241" className="hover:text-primary transition-colors">
+                  1300 618 241
+                </a>
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p>info@mrdrivers.com.au</p>
-                  </div>
+                    <p>
+                    <a href="mailto:info@mrdrivers.com.au" className="hover:text-primary transition-colors">
+                       info@mrdrivers.com.au
+                   </a>           
+                   </p>
+                </div>
                 </li>
                 <li className="flex items-start">
                   <Clock className="h-5 w-5 mr-3 mt-1 text-primary" />

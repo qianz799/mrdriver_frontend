@@ -33,7 +33,11 @@ const GetInTouchSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-resort-navy/80">+61 1300 618 241</p>
+                  <p className="text-resort-navy/80"> 
+                  <a href="tel:1300618241" className="hover:text-primary transition-colors">
+                  1300 618 241
+                </a>
+                </p>
                 </div>
               </div>
               
@@ -43,7 +47,11 @@ const GetInTouchSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <p className="text-resort-navy/80">info@mrdrivers.com.au</p>
+                  <p className="text-resort-navy/80">
+                  <a href="mailto:info@mrdrivers.com.au" className="hover:text-primary transition-colors">
+                  info@mrdrivers.com.au
+                </a>
+                  </p>
                 </div>
               </div>
               

@@ -130,7 +130,7 @@ const ServicesPage = () => {
       <div className="container mx-auto section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map(service => (
-            <Card key={service.id} className="overflow-hidden border-none shadow-lg">
+            <Card key={service.id} className="overflow-hidden border-none shadow-lg flex flex-col">
               <div className="relative h-60">
                 <img 
                   src={service.imageUrl} 
@@ -142,25 +142,29 @@ const ServicesPage = () => {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-bold font-playfair mb-4">{service.title}</h2>
-                <p className="text-resort-navy/80 mb-6">{service.description}</p>
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h2 className="text-2xl font-bold font-playfair mb-4">{service.title}</h2>
+                  <p className="text-resort-navy/80 mb-6">{service.description}</p>
+                  
+                  <h3 className="font-bold mb-3">What We Offer:</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 
-                <h3 className="font-bold mb-3">What We Offer:</h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link to="/contact">
-                  <Button className="bg-primary hover:bg-primary/90 w-full">
-                    Book Now
-                  </Button>
-                </Link>
+                <div className="mt-6">
+                  <Link to="/contact">
+                    <Button className="bg-primary hover:bg-primary/90 w-full">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}
