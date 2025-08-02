@@ -172,10 +172,7 @@ const TermsConditions = () => {
                 <p className="text-resort-navy/80 mt-2">MrDrivers may upgrade vehicles for free if capacity allows. Excess luggage or passengers may incur additional fees or require a different vehicle, quoted at booking.</p>
               </div>
               
-              <div>
-                <h3 className="text-xl font-semibold text-resort-navy mb-2">Online Discount:</h3>
-                <p className="text-resort-navy/80">Book online at www.mrdrivers.com.au to save 10% on all services.</p>
-              </div>
+          
               
               <div>
                 <h3 className="text-xl font-semibold text-resort-navy mb-2">Price Match Guarantee:</h3>
@@ -268,7 +265,7 @@ const TermsConditions = () => {
               <li><strong>Company Name:</strong> MrDrivers</li>
               <li><strong>Email:</strong> info@mrdrivers.com (info at mrdrivers dot com)</li>
               <li><strong>Phone:</strong> 1300 618 241 (one-three-zero-zero, six-one-eight, two-four-one)</li>
-              <li><strong>Address:</strong> 100 Harris St, Sydney, NSW, Australia</li>
+              <li><strong>Address:</strong> 100 Harris St Pyrmont NSW 2009, Australia</li>
               <li><strong>Website:</strong> www.mrdrivers.com.au</li>
             </ul>
           </div>

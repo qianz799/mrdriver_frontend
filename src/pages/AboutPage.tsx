@@ -42,7 +42,7 @@ const AboutPage = () => {
             <p className="mb-6">
               Our mission is simple - to provide an unmatched transportation experience that combines luxury, reliability, and exceptional customer service. We don't just transport people; we create memorable experiences with every journey.
             </p>
-            <Link to="/properties">
+            <Link to="/fleets">
               <Button className="bg-primary hover:bg-primary/90">
                 View Our Fleet
               </Button>

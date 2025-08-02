@@ -9,14 +9,14 @@ import { Input } from '@/components/ui/input';
 // Mock data for fleet vehicles
 const allFleets: Fleet[] = [
   {
-    id: '1',
-    title: 'Mercedes-Benz GLS',
-    price: 120,
-    image: '/images/fleets/1/Front.jpg',
-    passengers: '4',
-    interior: 'Black Leather',
+    id: '3',
+    title: 'Mercedes-Benz Maybach S680',
+    price: 250,
+    image: '/images/fleets/3/Front.jpg',
+    passengers: '3',
+    interior: 'Exclusive Leather',
     wifi: 'Upon Request',
-    bagCapacity: '4'
+    bagCapacity: '2'
   },
   {
     id: '7',
@@ -29,6 +29,16 @@ const allFleets: Fleet[] = [
     bagCapacity: '3'
   },
   {
+    id: '5',
+    title: 'Mercedes-Benz VIP Sprinter',
+    price: 300,
+    image: '/images/fleets/5/Front.jpg',
+    passengers: '8',
+    interior: 'VIP Leather',
+    wifi: 'Upon Request',
+    bagCapacity: '8'
+  },
+  {
     id: '2',
     title: 'Mercedes-Benz S class',
     price: 150,
@@ -39,14 +49,14 @@ const allFleets: Fleet[] = [
     bagCapacity: '3'
   },
   {
-    id: '3',
-    title: 'Mercedes-Benz Maybach S680',
-    price: 250,
-    image: '/images/fleets/3/Front.jpg',
-    passengers: '3',
-    interior: 'Exclusive Leather',
+    id: '1',
+    title: 'Mercedes-Benz GLS',
+    price: 120,
+    image: '/images/fleets/1/Front.jpg',
+    passengers: '4',
+    interior: 'Black Leather',
     wifi: 'Upon Request',
-    bagCapacity: '2'
+    bagCapacity: '4'
   },
   {
     id: '4',
@@ -58,16 +68,7 @@ const allFleets: Fleet[] = [
     wifi: 'Upon Request',
     bagCapacity: '6'
   },
-  {
-    id: '5',
-    title: 'Mercedes-Benz VIP Sprinter',
-    price: 300,
-    image: '/images/fleets/5/Front.jpg',
-    passengers: '8',
-    interior: 'VIP Leather',
-    wifi: 'Upon Request',
-    bagCapacity: '8'
-  },
+  
   {
     id: '6',
     title: 'Mercedes-Benz Sprinter 11-14PAX',

@@ -152,7 +152,7 @@ const PrivacyPolicy = () => {
               <li><strong>Company Name:</strong> MrDrivers</li>
               <li><strong>Email:</strong> info@mrdrivers.com (info at mrdrivers dot com)</li>
               <li><strong>Phone:</strong> 1300 618 241 (one-three-zero-zero, six-one-eight, two-four-one)</li>
-              <li><strong>Address:</strong> 100 Harris St, Sydney, NSW, Australia</li>
+              <li><strong>Address:</strong> 100 Harris St Pyrmont NSW 2009, Australia</li>
               <li><strong>Website:</strong> www.mrdrivers.com.au</li>
             </ul>
             <p className="text-resort-navy/80 mt-4">

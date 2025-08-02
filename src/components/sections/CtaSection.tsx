@@ -17,7 +17,7 @@ const CtaSection = () => {
               Book Now
             </Button>
           </Link>
-          <Link to="/properties">
+          <Link to="/fleets">
             <Button className="bg-white text-[#37475A] font-semibold px-8 py-2 rounded-md shadow hover:bg-gray-100">
               View Our Fleet
             </Button>

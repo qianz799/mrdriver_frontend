@@ -23,34 +23,34 @@ export interface Fleet {
 
 const fleets: Fleet[] = [
   {
-    id: '1',
-    title: 'Mercedes-Benz GLS',
-    price: 120,
-    image: '/images/fleets/1/Front.jpg',
-    passengers: '4',
-    interior: 'Black Leather',
-    wifi: 'Upon Request',
-    bagCapacity: '4'
-  },
-  {
     id: '2',
     title: 'Mercedes-Benz Maybach S680',
     price: 350,
-    image: '/images/fleets/2/Front.jpg',
+    image: '/images/fleets/3/Front.jpg',
     passengers: '3',
     interior: 'Exclusive Leather',
     wifi: 'Upon Request',
     bagCapacity: '2'
   },
   {
-    id: '3',
-    title: 'Mercedes-Benz S class',
-    price: 150,
-    image: '/images/fleets/3/Front.jpg',
+    id: '7',
+    title: 'Mercedes-Benz Maybach GLS 600',
+    price: 250,
+    image: '/images/fleets/7/Front.jpg',
     passengers: '3',
     interior: 'Black Leather',
     wifi: 'Upon Request',
     bagCapacity: '3'
+  },
+  {
+    id: '5',
+    title: 'Mercedes-Benz VIP Sprinter',
+    price: 300,
+    image: '/images/fleets/5/Front.jpg',
+    passengers: '8',
+    interior: 'VIP Leather',
+    wifi: 'Upon Request',
+    bagCapacity: '8'
   }
 ];
 

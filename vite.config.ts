@@ -5,9 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // 1）base 用于构建后文件中对资源路径的引用。
-  //   部署到 https://<用户名>.github.io/mrdriver_frontend/ 时，推荐写成 '/mrdriver_frontend/'
-  base: mode === 'production' ? '/mrdriver_frontend/' : '/',
+  // Use root path for all deployments
+  base: '/',
   // 2）将构建输出目录改为 dist，标准 Vite 行为
   build: {
     outDir: 'dist',

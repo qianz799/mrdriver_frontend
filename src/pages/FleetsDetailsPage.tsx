@@ -122,10 +122,10 @@ const fleetData = [
     location: 'Sydney, NSW',
     price: 180,
     image: '/images/fleets/6/Front.jpg',
-    passengers: 11-14,
+    passengers: '11-14',
     interior: 'Leather',
     wifi: 'Upon Request',
-    bagCapacity: 11-14,
+    bagCapacity: '11-14',
     description: 'Ideal for larger groups, the Mercedes-Benz Sprinter 11-14PAX offers comfort, space, and convenience for up to 14 passengers.',
     features: ['Large Cabin', 'Flexible Seating', 'Onboard WiFi', 'Luggage Space', 'Professional Chauffeur', 'Complimentary Water', 'USB Charging', 'Sanitized After Each Use'],
     gallery: [

@@ -32,7 +32,7 @@ const ContactPage = () => {
                   <MapPin className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <h3 className="font-bold mb-1">Address</h3>
-                    <p>100 Haris St, Pyromnt NSW 2009 Australia</p>
+                    <p>100 Harris St, Pyrmont NSW 2009 Australia</p>
                   </div>
                 </li>
                 <li className="flex items-start">

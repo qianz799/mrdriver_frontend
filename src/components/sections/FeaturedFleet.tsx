@@ -14,15 +14,15 @@ const FeaturedFleet: React.FC<FeaturedFleetFleet> = ({ fleets }) => {
   const { t } = useLanguage();
   // Only show GLS, Maybach, S class
   const featured = fleets.filter(f => [
-    'Mercedes-Benz GLS',
     'Mercedes-Benz Maybach S680',
-    'Mercedes-Benz S class'
+    'Mercedes-Benz Maybach GLS 600',
+    'Mercedes-Benz VIP Sprinter'
   ].includes(f.title));
   return (
     <section className="pt-24 pb-16 bg-accent/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold font-playfair mb-4">Fleets</h2>
+          <h2 className="text-4xl font-bold font-playfair mb-4">Featured Fleets</h2>
           <p className="text-resort-navy/70 max-w-2xl mx-auto">
             Discover our collection of luxury vehicles for your premium transportation needs
           </p>
